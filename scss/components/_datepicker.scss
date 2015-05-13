@@ -98,7 +98,7 @@
 		        .ui-state-default {background:white; border:none;} 
 		   
     }
-     .with_events a {color:$nysm_blue;
+     .has-event a {color:$nysm_blue; text-decoration:underline;
      	&:hover{color:red;}
      } 
      } 

@@ -22,3 +22,43 @@ form {
 
 	}
 }
+
+.school-group-registration {
+	p {padding-left:0.66667em; padding-right:0.66667em;}
+
+		#addressfield-wrapper--2 {
+			fieldset {border:none; padding:0; margin:0}
+
+		}
+		.field-name-field-requested-dates {
+			table {
+				thead {display:none;}
+			}
+			table#field-requested-dates-values {width:100%;
+			fieldset.form-wrapper { padding:0; margin:0; border:none;}
+
+			}
+		}
+		#field-special-special-needs-add-more-wrapper--2, #field-additional-info-add-more-wrapper--2{
+			label{display:none;}
+		}
+		#indemnification {
+			h2.pane-title{font-size:1em;color:red;}
+			p {padding:1em; border:1px red solid;}
+		}
+
+		.form-item-field-indemnification-clause-und {
+			label {color:red;}
+		}
+		.pane-entityform-field-number-of-cars {@include clearfix; clear:right;}
+
+}
+//.container-inline-date .form-item {
+//  border: none;
+//}
+//.container-inline-date .date-padding {
+//  padding: 0px;
+//}
+//.container-inline-date label {
+//  display:none
+//}

@@ -4236,7 +4236,7 @@ form.custom .custom {
   form.custom .custom.checkbox:before {
     content: "";
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff; }
   form.custom .custom.radio.checked:before {
     content: "";
@@ -5405,7 +5405,7 @@ h1, h2 {
   margin: 0 auto; }
 
 .nysmnav {
-  background: white url('../images/menu-shadow.png?1428516605') bottom repeat-x;
+  background: white url('../images/menu-shadow.png?1431026026') bottom repeat-x;
   border-top: 1px solid #FFD678;
   padding-bottom: 4px;
   margin-bottom: -4px; }
@@ -5442,10 +5442,10 @@ h1, h2 {
     display: none; } }
 
 body {
-  background: #fbfbfb url('../images/nysm-background.png?1428516605') 50% 0 no-repeat fixed; }
+  background: #fbfbfb url('../images/nysm-background.png?1431026026') 50% 0 no-repeat fixed; }
   @media (max-device-width: 1024px) {
     body {
-      background: #fbfbfb url('../images/nysm-background.png?1428516605') bottom right no-repeat fixed;
+      background: #fbfbfb url('../images/nysm-background.png?1431026026') bottom right no-repeat fixed;
       -moz-background-size: cover;
       -o-background-size: cover;
       -webkit-background-size: cover;
@@ -5654,7 +5654,7 @@ ul.breadcrumbs {
     font-weight: bold;
     text-transform: uppercase; }
 .calendar-list .featured {
-  background: rgba(255, 255, 255, 0.6) url('../images/featured75.png?1428516605') top right no-repeat;
+  background: rgba(255, 255, 255, 0.6) url('../images/featured75.png?1431026026') top right no-repeat;
   padding: 1.5em .7em 1.5em .7em; }
 .calendar-list h3 {
   color: #ababab;
@@ -5743,10 +5743,40 @@ form .tabledrag-toggle-weight-wrapper {
 form .field-multiple-table td.field-multiple-drag {
   display: none; }
 
+.school-group-registration p {
+  padding-left: 0.66667em;
+  padding-right: 0.66667em; }
+.school-group-registration #addressfield-wrapper--2 fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+.school-group-registration .field-name-field-requested-dates table thead {
+  display: none; }
+.school-group-registration .field-name-field-requested-dates table#field-requested-dates-values {
+  width: 100%; }
+  .school-group-registration .field-name-field-requested-dates table#field-requested-dates-values fieldset.form-wrapper {
+    padding: 0;
+    margin: 0;
+    border: none; }
+.school-group-registration #field-special-special-needs-add-more-wrapper--2 label, .school-group-registration #field-additional-info-add-more-wrapper--2 label {
+  display: none; }
+.school-group-registration #indemnification h2.pane-title {
+  font-size: 1em;
+  color: red; }
+.school-group-registration #indemnification p {
+  padding: 1em;
+  border: 1px red solid; }
+.school-group-registration .form-item-field-indemnification-clause-und label {
+  color: red; }
+.school-group-registration .pane-entityform-field-number-of-cars {
+  overflow: hidden;
+  *zoom: 1;
+  clear: right; }
+
 @font-face {
   font-family: "gothambook";
-  src: url('../fonts/gotham-book-webfont.eot?1428516605');
-  src: url('../fonts/gotham-book-webfont.eot?&1428516605#iefix') format('embedded-opentype'), url('../fonts/gotham-book-webfont.woff?1428516605') format('woff'); }
+  src: url('../fonts/gotham-book-webfont.eot?1431026026');
+  src: url('../fonts/gotham-book-webfont.eot?&1431026026#iefix') format('embedded-opentype'), url('../fonts/gotham-book-webfont.woff?1431026026') format('woff'); }
 /*!
  * jQuery UI Datepicker 1.10.3
  * http://jqueryui.com
@@ -5781,14 +5811,14 @@ form .field-multiple-table td.field-multiple-drag {
   border: none; }
 
 .ui-datepicker .ui-datepicker-prev {
-  background: url('../images/left-arrow-small.png?1428516605') no-repeat;
+  background: url('../images/left-arrow-small.png?1431026026') no-repeat;
   padding: 0;
   left: 2px; }
   .ui-datepicker .ui-datepicker-prev .ui-icon {
     background: none; }
 
 .ui-datepicker .ui-datepicker-next {
-  background: url('../images/right-arrow-small.png?1428516605') no-repeat right;
+  background: url('../images/right-arrow-small.png?1431026026') no-repeat right;
   right: 2px; }
   .ui-datepicker .ui-datepicker-next .ui-icon {
     background: none; }
@@ -5843,9 +5873,10 @@ form .field-multiple-table td.field-multiple-drag {
     .ui-datepicker table tr td .ui-state-default {
       background: white;
       border: none; }
-  .ui-datepicker table tr .with_events a {
-    color: #0068b5; }
-    .ui-datepicker table tr .with_events a:hover {
+  .ui-datepicker table tr .has-event a {
+    color: #0068b5;
+    text-decoration: underline; }
+    .ui-datepicker table tr .has-event a:hover {
       color: red; }
 
 .ui-datepicker td span,

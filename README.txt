@@ -6,6 +6,8 @@ Please refer also to the community documentation:
 BUILD A THEME WITH ZURB FOUNDATION
 ----------------------------------
 
+
+
 The base Foundation theme is designed to be easily extended by its sub-themes.
 You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
 but instead you should create a sub-theme of zurb_foundation which is located in
