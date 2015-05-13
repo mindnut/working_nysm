@@ -200,3 +200,71 @@
         border-right-width: 0;
         border-left-width: 1px;
 }
+
+#redcat-datepicker-details {
+    background: #666;
+    border-top: 1px solid #fff;
+    padding: 0;
+    color: #fff;
+    position: relative;
+}
+
+#nysm-datepicker-details .view-empty p {
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+#nysm-datepicker-details .content {
+    padding: 13px 10px 10px;
+}
+
+#nysm-datepicker-details .content .views-field-field-content-full-artist-title a {
+    display: block;
+    padding-bottom: 2px;
+    color: #fff;
+    border-top: 1px solid #838383;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#nysm-datepicker-details .loading {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #666 url(/sites/all/themes/custom/nysm_adaptivetheme/images/loading.gif) no-repeat center center;
+    z-index: 80000;
+    position: absolute;
+}
+
+#nysm-datepicker-footer {
+    background: #666 url(/sites/all/themes/custom/nysm_adaptivetheme/images/bkg-column-bottom.png) no-repeat scroll -5px bottom;
+    border: none;
+    padding: 15px 10px 0;
+    width: 140px;
+}
+
+#nysm-datepicker-details .views-field-field-content-full-artist-title a:hover {
+    text-decoration: underline;
+}
+
+#nysm-datepicker-details h2 {
+    color: #ffff00;
+    font-size: 1.3em;
+}
+
+#nysm-datepicker-details .view-datepicker-details .view-empty {
+    border-top: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+#nysm-datepicker-details h3 {
+    display: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #838383;
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+    padding-top: 10px;
+    clear: both;
+}
