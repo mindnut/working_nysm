@@ -8,8 +8,10 @@
 // https://github.com/zurb/foundation/blob/master/scss/foundation.scss
 
 // Global Zurb Foundation variables.
+
+
 @import "variables";
-@import "functions";
+
 // Comment out this import if you don't want to use normalize.
 @import "normalize";
 
@@ -25,7 +27,7 @@
 // @import "foundation/components/global";
 // @import "foundation/components/grid";
 // @import "foundation/components/visibility";
-@import "foundation/components/block-grid";
+// @import "foundation/components/block-grid";
 // @import "foundation/components/type";
 // @import "foundation/components/buttons";
 
