@@ -648,14 +648,6 @@ function nysm_field_widget_form_alter(&$element, &$form_state, $context) {
   }
 }
 
-/**
-function nysm_form_alter(&$form, &$form_state, $form_id) {
-  dsm($form);
-  dsm($form_state);
-      
- 
-}
-*/
 
 
 

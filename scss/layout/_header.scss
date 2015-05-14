@@ -59,15 +59,13 @@
   padding: 18px 0px 8px 0px; 
       max-width: 1000px;
       margin: 0 auto;  
- 
-
-}
+ }
 
 
 // Top Bar
 //--------------------------------------------------
 .nysmnav {
- background: white image-url('menu-shadow.png') bottom repeat-x;
+ background: white image-url('menu-shadow.png') bottom repeat-x !important;
   border-top: 1px solid $nysm_yellow;
   padding-bottom: 4px;
   margin-bottom:-4px;
@@ -98,20 +96,18 @@
       }
     &.active-trail {border-bottom: 2px solid $nysm_blue;}
     
-}
+    }
   }
 //  .has-dropdown > a::after {display:none; margin-right:0px !important; }
 //  .has-dropdown > a { margin-right:0px !important; }
 
 
-   ul.dropdown, .dropdown, ul.dropdown li { @media (min-width:610px){display:none;};
+ //  ul.dropdown, .dropdown, ul.dropdown li { @media (min-width:610px){display:none;};
 
-  }
+ // }
 }
 
-.top-bar-section {}
-.top-bar-section .left {}
-.top-bar-section .right {}
+
 
 
  

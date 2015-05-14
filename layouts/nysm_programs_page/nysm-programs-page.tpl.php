@@ -20,10 +20,10 @@
   <div class="large-12 columns">
     <?php print $content['top']; ?>
   </div>
-  <div class="large-8 columns">
+  <div class="large-9 columns">
     <?php print $content['left']; ?>
   </div>
-  <div class="large-4 columns" id="programs-nav">
+  <div class="large-3 columns" id="programs-nav">
     <?php print $content['right']; ?>
   </div>
  

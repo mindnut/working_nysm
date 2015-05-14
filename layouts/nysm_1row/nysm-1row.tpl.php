@@ -16,7 +16,9 @@
  */
 ?>
 
-<div <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+<div class="banner-image"> <?php print $content['banner']; ?></div>
+<div class="pagesubnav"><?php print $content['subnav']; ?></div>
+<div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   
   
     <?php print $content['top']; ?>
