@@ -1,14 +1,14 @@
 // Non-modular or client styles for the .l-content region.
 
-body {background:#fbfbfb image-url('nysm-background.png') 50% 0 no-repeat fixed;
-@include breakpoint(all-mobile) {background: #fbfbfb image-url('nysm-background.png') bottom right no-repeat fixed;
+body {background:#fbfbfb image-url('nysm-backgrounda.png') 50% 0 no-repeat fixed;
+@include breakpoint(all-mobile) {background: #fbfbfb image-url('nysm-background.pnga') bottom right no-repeat fixed;
 @include background-size(cover)}
 }
 
 
 .page { }
 .l-main {min-height:100%; margin-bottom: 3em; }
-.main-body {margin-top:2em;}
+.main-body {margin-top:2em;} 
 .highlighted-image {
  // background:50% 0;50
  // position:relative;
@@ -25,7 +25,7 @@ body {background:#fbfbfb image-url('nysm-background.png') 50% 0 no-repeat fixed;
       .section-heading {
       color:white;
       font-size: 3em;
-      font-family:"gothambook";
+  //    font-family:"gothambook";
 
       max-width: 1000px;
       margin: 0 auto;

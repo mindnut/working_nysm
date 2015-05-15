@@ -1,0 +1,71 @@
+// Docs: http://foundation.zurb.com/docs/components/forms.html
+
+// Drupal specific classes
+// ----------------------------------------------------------------------------
+.form-text {}
+.form-submit {}
+
+.entitytype-test_form-form {
+.tabledrag-toggle-weight-wrapper {display:none;}
+
+fieldset.form-wrapper {margin:0; padding:0;
+	.container-inline-date { width:100%;
+		.description {display:none;}}
+}
+#field-datetime-values legend {display:none;}
+}
+
+form {
+	.tabledrag-toggle-weight-wrapper {display:none;}
+	.field-multiple-table{
+		td.field-multiple-drag {display:none;}
+
+	}
+}
+
+.school-group-registration {
+	p {padding-left:0.66667em; padding-right:0.66667em;}
+
+		#addressfield-wrapper--2 {
+			fieldset {border:none; padding:0; margin:0}
+
+		}
+		.field-name-field-requested-dates {
+			table {
+				thead {display:none;}
+			}
+			table#field-requested-dates-values {width:100%;
+			fieldset.form-wrapper { padding:0; margin:0; border:none;}
+
+			}
+		}
+		#field-special-special-needs-add-more-wrapper--2, #field-additional-info-add-more-wrapper--2{
+			label{display:none;}
+		}
+		#indemnification {
+			h2.pane-title{font-size:1em;color:red;}
+			p {padding:1em; border:1px red solid;}
+		}
+
+		.form-item-field-indemnification-clause-und {
+			label {color:red;}
+		}
+		.pane-entityform-field-number-of-cars {@include clearfix; clear:right;}
+
+		#ief-entity-table-edit-field-class-selection-und-entities {width:100%;
+		.tabledrag-toggle-weight-wrapper {display:none;}
+	.field-multiple-table{
+		td.field-multiple-drag {display:none;}
+	}
+	}
+
+}
+//.container-inline-date .form-item {
+//  border: none;
+//}
+//.container-inline-date .date-padding {
+//  padding: 0px;
+//}
+//.container-inline-date label {
+//  display:none
+//}

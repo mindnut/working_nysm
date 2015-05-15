@@ -8,8 +8,6 @@
 
 @include font-face("gothambook", font-files("gotham-book-webfont.woff", woff), "gotham-book-webfont.eot");
 
-$nysm_blue: #0068b5;
-$nysm_yellow: #FFD678;
 
 @mixin stage {
   position: absolute;
