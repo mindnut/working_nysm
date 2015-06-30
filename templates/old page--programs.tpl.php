@@ -3,7 +3,7 @@
 
   <!--.l-header region -->
   <header role="banner" class="l-header">
-  <div class="nysmshield">
+  <div class="nysmshield show-for-large-up">
  <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/shield.png'?>" alt="<?php print t('Home'); ?>" /> </a>
 </div>
 <?php if (!empty($page['toplinks'])): ?>

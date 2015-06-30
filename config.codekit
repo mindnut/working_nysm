@@ -3960,6 +3960,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/foundation.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/foundation.js",
+		"outputAbbreviatedPath": "\/js\/min\/foundation-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/foundation.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -3982,12 +3993,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/foundation\/foundation.alerts.js": {
+	"\/js\/foundation\/foundation.accordion.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.alerts.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.alerts-min.js",
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.accordion.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.accordion-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/foundation\/foundation.alert.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.alert.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.alert-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4004,17 +4026,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/foundation\/foundation.cookie.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.cookie.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.cookie-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/foundation\/foundation.dropdown.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -4026,12 +4037,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/foundation\/foundation.forms.js": {
+	"\/js\/foundation\/foundation.equalizer.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.forms.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.forms-min.js",
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.equalizer.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.equalizer-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4081,23 +4092,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/foundation\/foundation.offcanvas.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.offcanvas.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.offcanvas-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/foundation\/foundation.orbit.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.orbit.js",
 		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.orbit-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/foundation\/foundation.placeholder.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.placeholder.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.placeholder-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4114,23 +4125,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/foundation\/foundation.section.js": {
+	"\/js\/foundation\/foundation.slider.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.section.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.section-min.js",
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.slider.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.slider-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/foundation\/foundation.tooltips.js": {
+	"\/js\/foundation\/foundation.tab.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/foundation\/foundation.tooltips.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.tooltips-min.js",
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.tab.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.tab-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/foundation\/foundation.tooltip.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/foundation\/foundation.tooltip.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.tooltip-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4175,6 +4197,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.scrollTo-1.4.2-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/jquery.scrollTo-1.4.2-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/nysm-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/nysm-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/nysm-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4413,6 +4446,46 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layouts\/nysm_exhibition_node\/nysm-exhibitions-node.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/layouts\/nysm_exhibition_node\/nysm-exhibitions-node.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/layouts\/nysm_exhibition_node\/nysm_exhibitions.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196,
+		"inputAbbreviatedPath": "\/layouts\/nysm_exhibition_node\/nysm_exhibitions.png",
+		"outputAbbreviatedPath": "\/layouts\/nysm_exhibition_node\/nysm_exhibitions.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layouts\/nysm_exhibitions\/nysm-exhibitions.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/layouts\/nysm_exhibitions\/nysm-exhibitions.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/layouts\/nysm_exhibitions\/nysm_exhibitions.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196,
+		"inputAbbreviatedPath": "\/layouts\/nysm_exhibitions\/nysm_exhibitions.png",
+		"outputAbbreviatedPath": "\/layouts\/nysm_exhibitions\/nysm_exhibitions.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layouts\/nysm_homepage\/nysm-homepage.tpl.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4469,6 +4542,26 @@
 		"initialSize": 196,
 		"inputAbbreviatedPath": "\/layouts\/nysm_programs_page\/nysm_programs_page.png",
 		"outputAbbreviatedPath": "\/layouts\/nysm_programs_page\/nysm_programs_page.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layouts\/nysm_rightcolstandard\/nysm-rightcolstandard.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/layouts\/nysm_rightcolstandard\/nysm-rightcolstandard.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/layouts\/nysm_rightcolstandard\/nysm_rightcolstandard.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196,
+		"inputAbbreviatedPath": "\/layouts\/nysm_rightcolstandard\/nysm_rightcolstandard.png",
+		"outputAbbreviatedPath": "\/layouts\/nysm_rightcolstandard\/nysm_rightcolstandard.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4545,22 +4638,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/_settings.scss",
 		"outputAbbreviatedPath": "\/css\/_settings.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/scss\/_variables.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scss\/_variables.scss",
-		"outputAbbreviatedPath": "\/css\/_variables.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -5544,6 +5621,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/scss\/layout\/_press.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/layout\/_press.scss",
+		"outputAbbreviatedPath": "\/css\/_press.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/scss\/layout\/_programs.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -5704,15 +5797,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/scss\/theme\/_type.scss": {
+	"\/scss\/theme\/system.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scss\/theme\/_type.scss",
-		"outputAbbreviatedPath": "\/css\/_type.css",
+		"inputAbbreviatedPath": "\/scss\/theme\/system.scss",
+		"outputAbbreviatedPath": "\/css\/system.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -5752,6 +5845,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/old page--programs.tpl.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/page--publications.tpl.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/page--publications.tpl.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

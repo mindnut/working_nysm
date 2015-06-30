@@ -4,17 +4,17 @@
  * Implements hook_panels_layouts()
  */
 $plugin = array(
-    'title' => t('NYSM: 2 column standard with fullwidth header'),
-    'category' => t('NYSM: 2'),
-    'icon' => 'nysm_2colstandard.png',
-    'theme' => 'nysm_2colstandard',
+    'title' => t('NYSM: Standard Page with Right Column'),
+    'category' => t('NYSM: Standard Museum Pages'),
+    'icon' => 'nysm_rightcolstandard.png',
+    'theme' => 'nysm_rightcolstandard',
     //'admin css' => '../foundation_panels_admin.css',
     'regions' => array(
       'banner' => t('banner'),
       'subnav' => t('subnav'),
       'top' => t('top'),
-      'right_col' => t('Right Column'),
       'main' => t('main'),
+      'right' => t('right'),
       'bottom' => t('bottom')
     ),
   );

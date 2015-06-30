@@ -6,7 +6,7 @@
 // Mixin: Base Utility
 //
 
-@include font-face("gothambook", font-files("gotham-book-webfont.woff", woff), "gotham-book-webfont.eot");
+//@include font-face("gothambook", font-files("gotham-book-webfont.woff", woff), "gotham-book-webfont.eot");
 
 
 @mixin stage {
@@ -35,7 +35,7 @@
 }
 
 
-@mixin nysm-title($sized: 16){ font-family: "gothambook"; font-size:emCalc($sized)}
+@mixin nysm-title($sized: 14, $botmargin: 8px){ font-family: "gothambold"; font-size:emCalc($sized); margin-bottom:$botmargin;}
 
 @mixin nicebox($botmargin:1em, $padding:.5em){margin-bottom:$botmargin; padding:$padding; border:1px #f2f2f2 solid; background:rgba(255, 255, 255, 0.6);}
 
@@ -44,3 +44,12 @@
       margin: 0 auto;
       margin-bottom: $topbar-margin-bottom;
     }
+
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 14px;
+$default-text-shadow-v-offset: 1px
+
+// Section Colors
+
+
+

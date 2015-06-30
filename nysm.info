@@ -27,7 +27,7 @@ base theme = zurb_foundation
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; For CSS users, load the app.css file:
-stylesheets[all][] = css/app.css
+;stylesheets[all][] = css/app.css
 ; Comment the app.css file (above) if you're using sass to preprocess css:
 stylesheets[all][] = css/nysm.css
 
@@ -44,6 +44,7 @@ scripts[] = js/vendor/custom.modernizr.js
 ; If you prefer to have more control over which components are included you
 ; can comment this line and uncomment the ones below you want.
 scripts[] = js/foundation.min.js
+scripts[] = js/foundation/foundation.offcanvas.js
 
 ; Foundation framework scripts (uncompressed).
 ;scripts[] = js/foundation/foundation.js
@@ -78,6 +79,7 @@ scripts[] = js/foundation.min.js
 ; You'll use this variable in page.tpl.php:
 ;   <?php print render($page['header']); ?>
 
+regions[off_canvas_menu_data]  = Off Canvas Menu for Mobile
 regions[homepage_slider]     = Homepage Slider
 regions[toplinks]			 = Top Links
 regions[highlightedimage]	 = Highlighted Image

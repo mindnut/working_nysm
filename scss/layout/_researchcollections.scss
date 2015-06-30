@@ -1,11 +1,29 @@
+.page-taxonomy-term-42 {
+  .main-body {
+  h2 a{color:$anthropology;}
+  a {color:$anthropology;}
+}
+}
+
 .view-contributor {
 	.contributor {margin:2em 0;
-	.field-name-ds-user-picture {margin-top:1em;}
-	.field-name-field-research-state p {margin: 0 0 .5em 1em; border-bottom: 1px solid #fff; }
-	.researchtitle{font-weight: bold;font-size:emCalc(12); margin-left:1em;}
-
-	.my-research {  margin-left:2em; 
-		.views-row {margin-top:6px;}
+		.field-name-ds-user-picture {margin-top:1em;}
+		.field-name-field-research-state p {margin: 0 0 .5em 1em; border-bottom: 1px solid #fff; }
+		.researchtitle{font-weight: bold;font-size:emCalc(12); margin-left:1em;}
+		.my-research {  margin-left:2em; 
+			.views-row {margin-top:6px;}
 	}
 	}
 }
+
+.research-projects-list {
+	.views-row{ @include nicebox(.5em, 1em);
+	h2{@include nysm-title(15, 0)}
+	.field-name-project-manager{ font-size:emCalc(12); color:#444; 
+		.manager_name{ font-weight:700; display:inline; color:$research_collections;}}
+	p{ margin:.7em 0 0 0 ; font-size: emCalc(12);
+	a.more-link {font-size:.8rem;}	
+	}
+}
+}
+

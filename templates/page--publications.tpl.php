@@ -1,7 +1,7 @@
 <!--.page -->
 <div class="off-canvas-wrap" data-offcanvas>
 <div class="inner-wrap">
-<nav class="tab-bar show-for-small-only" data-topbar <?php print $top_bar_options; ?>>
+<nav class="tab-bar show-for-small-only">
  <section class="left-small">
         <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
   </section>
@@ -36,7 +36,7 @@
       <?php if ($top_bar_classes): ?>
       <div class="<?php print $top_bar_classes; ?> nysmnav hidden-for-small-only">
       <?php endif; ?>
-        <nav class="top-bar" data-topbar <?php print $top_bar_options; ?>>
+        <nav class="top-bar"<?php print $top_bar_options; ?>>
           <ul class="title-area">
             <li class="name"><h1><?php print $linked_site_name; ?></h1></li>
             <li class="toggle-topbar menu-icon"><a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
@@ -157,7 +157,10 @@
           <?php print render($action_links); ?>
         </ul>
       <?php endif; ?>
+    <div class="row main-body">
+    <div class="large-9 columns">
       <?php print render($page['content']); ?>
+    </div>
     <!--/.main region -->
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside role="complementary" class="<?php print $sidebar_first_grid; ?> sidebar-first columns sidebar">
@@ -166,10 +169,11 @@
     <?php endif; ?>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside role="complementary" class="<?php print $sidebar_sec_grid; ?> sidebar-second columns sidebar">
+      <aside role="complementary" class="<?php print $sidebar_sec_grid; ?> sidebar-second columns large-3 sidebar biblio-search">
         <?php print render($page['sidebar_second']); ?>
       </aside>
     <?php endif; ?>
+    </div>
   </main>
   <!--/.main-->
   <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>

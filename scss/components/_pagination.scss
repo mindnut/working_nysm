@@ -146,7 +146,7 @@ $pagination-link-current-active-bg: $primary-color !default;
 
 @include exports("pagination") {
   @if $include-pagination-classes {
-    ul.pagination {
+    ul.pagination, ul.pager{
       @include pagination;
     }
 

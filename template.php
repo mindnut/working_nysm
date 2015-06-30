@@ -239,6 +239,7 @@ function nysm_preprocess_render_link($link) {
 
 function nysm_css_alter(&$css) {
   // Always remove base theme CSS.
+ unset($css[drupal_get_path('module','system').'/system.theme.css']);
   $theme_path = drupal_get_path('theme', 'zurb_foundation');
 
   foreach($css as $path => $values) {
@@ -633,6 +634,7 @@ function nysm_preprocess_image(&$variables){
  * Implements hook_field_widget_form_alter().
  */
 
+
 function nysm_field_widget_form_alter(&$element, &$form_state, $context) {
   if (isset($element['#field_name'])) {
     switch ($element['#field_name']) {
@@ -648,6 +650,60 @@ function nysm_field_widget_form_alter(&$element, &$form_state, $context) {
   }
 }
 
+function nysm_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'biblio_search_form') {
+    $form['search_form']['#title'] = t('Search Publications');
+    $form['search_form']['#collapsible'] = FALSE;  //Search form
+    $form['search_form']['#collapsed'] = FALSE;  //Search form
+///dpm($form);
+  $form['search_form']['filterform']['filters']['#title'] = t('Also Search by');
+   $form['search_form']['filterform']['filters']['#collapsible'] = FALSE;  //Filter form fields
+   $form['search_form']['filterform']['filters']['#collapsed'] = FALSE;  //Filter form fields
+   $form['search_form']['searchform']['biblio_search']['submit']['#value'] = t('Find');
+    $form['search_form']['filterform']['filters']['status']['filters']['type']['#access'] = TRUE;  //Hide type filter
+    $form['search_form']['filterform']['filters']['status']['filters']['year']['#access'] = TRUE;  //Hide year filter
+    $form['search_form']['filterform']['filters']['status']['filters']['author']['#access'] = TRUE;  //Hide author filter
+    $form['search_form']['filterform']['filters']['status']['filters']['keyword']['#access'] = TRUE;  //Hide keyword
+    $form['search_form']['filterform']['filters']['status']['filters']['term-id']['#access'] = FALSE;  //Hide keyword
+  }
+}
+
+/**
+ * Implements menu_link__main_menu.
+ */
+
+
+function nysm_menu_link(&$variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  $element['#attributes']['data-menu-parent'] = array($element['#original_link']['menu_name'] . '-' . $element['#original_link']['depth']);
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+function nysm_preprocess_menu_tree(&$variables) {
+  $tree = new DOMDocument();
+  @$tree->loadHTML($variables['tree']);
+  $links = $tree->getElementsByTagname('li');
+  $parent = '';
+
+  foreach ($links as $link) {
+    $parent = $link->getAttribute('data-menu-parent');
+    break;
+  }
+
+  $variables['menu_parent'] = $parent;
+}
+
+function nysm_menu_tree(&$variables) {
+  return '<ul class="menu ' . $variables['menu_parent'] . '">' . $variables['tree'] . '</ul>';
+}
 
 
 

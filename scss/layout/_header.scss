@@ -62,51 +62,6 @@
  }
 
 
-// Top Bar
-//--------------------------------------------------
-.nysmnav {
- background: white image-url('menu-shadow.png') bottom repeat-x !important;
-  border-top: 1px solid $nysm_yellow;
-  padding-bottom: 4px;
-//  margin-bottom:-4px;
-}
-
-.top-bar {
-  .title-area {}
-
-
-
-  ul.main-nav li {
-    border-right:1px dotted #fbfbfb;
-    &.last {border-right:none;}
-  & a{
-  	padding-bottom:-2px;
-  	border-bottom: 2px solid transparent;
-  @include transition-property(border);
-   @include transition-duration(.2s); 
-   @include transition-timing-function(ease-in);
-  	&:hover {
-  		border-bottom: 2px solid $nysm_blue;
-  	}
-    // Apply the active link color when it has that class
-    &.active {
-        border-bottom: 2px solid $nysm_blue;
-        background:none;
-        color:#545454;
-      }
-    &.active-trail {border-bottom: 2px solid $nysm_blue;}
-    
-    }
-  }
-//  .has-dropdown > a::after {display:none; margin-right:0px !important; }
-//  .has-dropdown > a { margin-right:0px !important; }
-
-
- //  ul.dropdown, .dropdown, ul.dropdown li { @media (min-width:610px){display:none;};
-
- // }
-}
-
 
 
 

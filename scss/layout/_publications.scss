@@ -6,3 +6,33 @@
 	.views-row-even {background:rgba(220, 220, 220, .3);}
 }
 
+#biblio-header form {display:none;}
+
+fieldset #edit-filters--3 {display:hidden;}
+
+.biblio-search{
+
+.exposed-filters .filters {
+  float: left; /* LTR */
+  margin-right: 1em; /* LTR */
+  width: 100%!important; 
+}
+.form-item-term-id {display:none;}
+}
+
+.biblio-export {display:none;}
+
+ul.biblio-export-buttons {
+	li a {font-size:.8rem;}
+}
+
+.user-biblio-listing {font-size:.8rem;
+	.view-content h3{font-size:.8rem; font-weight:bold;}
+	.views-row{margin:.5em 0;}
+
+}
+.biblio-authors{
+	a{color:#222;}
+	a.biblio-local-author {color:$nysm_blue;}
+
+}

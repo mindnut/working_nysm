@@ -116,9 +116,12 @@
 @import "layout/programs";
 @import "layout/publications";
 @import "layout/researchcollections";
-
+@import "layout/press";
 @import "theme/forms";
-@import "base/mixins";
+
+
+@include font-face("gothambook", font-files("gotham-book-webfont.woff", woff, "gotham-book-webfont.otf", opentype), "gotham-book-webfont.eot");
+@include font-face("gothambold", font-files("gotham-medium-webfont.woff", woff, "gotham-medium-webfont.otf", opentype), "gotham-medium-webfont.eot");
 
 // Modules
 // @import "modules/block";
