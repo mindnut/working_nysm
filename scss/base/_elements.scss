@@ -7,16 +7,25 @@
 
 // Headings
 //------------------------------------------
-h1, h2,  {font-family:"gothambook"; letter-spacing:-.05em;}
+// h1, h2,  {font-family:"gothambook"; letter-spacing:-.05em;}
 // h3 {font-family:"gothambook"; letter-spacing:-.08em; }
 
-h3, h4, h5, h6 {}
+//h3, h4, h5, h6 {}
 
 
 
 
 h2 { @include breakpoint(all-mobile){ font-size:emCalc(24);}}
 
+h4 {@include nysm-title(15);}
+
+h2.pane-title, h2.page-title, .view-header h2 {font-family: "gothambold"; }
+
+.pane-departments, .pane-research-projects, .pane-collections, .pane-news {
+h2.pane-title {@extend h4;}
+}
+
+.field-name-field-days-of-availability, .form-item-field-placement-possibilities-und {.form-type-checkbox {display:inline-block;}}
 
 // Anchors
 //-----------------------------------------------------------------------------
@@ -65,3 +74,4 @@ h2 { @include breakpoint(all-mobile){ font-size:emCalc(24);}}
 // }
 
 // select {}
+#admin-menu-wrapper ul {font-size:10px!important;}

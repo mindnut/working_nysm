@@ -15,18 +15,17 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-
-<div class="row" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
-  <div class="large-12 columns">
-    <?php print $content['top']; ?>
+ <div class="banner-image">   <?php print $content['top']; ?>
   </div>
-  <div class="large-3 columns">
+<div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+
+  <div class="medium-5 columns">
     <?php print $content['left']; ?>
   </div>
-  <div class="large-6 columns">
+  <div class="medium-4 columns">
     <?php print $content['middle']; ?>
   </div>
-  <div class="large-3 columns">
+  <div class="medium-3 columns">
     <?php print $content['right']; ?>
   </div>
     <div class="large-12 columns">

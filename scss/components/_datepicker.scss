@@ -9,13 +9,14 @@
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 // .block-views-event-calendar-datepicker-block {margin-top:5.5em;}
-
+#nysm-datepicker {
 .ui-datepicker {
         width: 100%;
         padding: 0;
         display: none;
         border:none;
         background:transparent;
+}
 }
 .ui-datepicker .ui-datepicker-header {
 		background:transparent;

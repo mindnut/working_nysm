@@ -5,7 +5,7 @@
  */
 $plugin = array(
     'title' => t('NYSM: 2 column standard with fullwidth header'),
-    'category' => t('NYSM: 2'),
+    'category' => t('NYSM: Standard Museum Pages'),
     'icon' => 'nysm_2colstandard.png',
     'theme' => 'nysm_2colstandard',
     //'admin css' => '../foundation_panels_admin.css',

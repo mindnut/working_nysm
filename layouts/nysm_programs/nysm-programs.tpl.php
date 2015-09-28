@@ -16,17 +16,23 @@
  */
 ?>
 
-<div class="row program-node" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+<div class="banner-image"> <?php print $content['banner']; ?>
+<div class="pagesubnav"><?php print $content['subnav']; ?></div></div>
+
+<div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   <div class="large-12 columns">
     <?php print $content['top']; ?>
   </div>
-  <div class="large-6 columns">
+
+  <div class="large-8 columns">
     <?php print $content['left']; ?>
   </div>
+
   <div class="large-4 columns">
-    <?php print $content['middle']; ?>
-  </div>
-  <div class="large-2 columns">
     <?php print $content['right']; ?>
+  </div>  
+
+  <div class="large-12 columns">
+    <?php print $content['bottom']; ?>
   </div>
 </div> <!-- panels row -->

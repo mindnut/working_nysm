@@ -233,6 +233,14 @@ function nysm_preprocess_render_link($link) {
 
 */
 
+function nysm_preprocess_page(&$vars) {
+  if(drupal_is_front_page()) {
+    drupal_add_js(drupal_get_path('theme', 'nysm') . '/js/edge_includes/edge.6.0.0.min.js');
+    drupal_add_js(drupal_get_path('theme', 'nysm') . '/homepageanimation/index.js');
+   
+  }
+}
+
 /**
  * Implements hook_css_alter().
  */
@@ -247,6 +255,12 @@ function nysm_css_alter(&$css) {
       unset($css[$path]);
     }
   }
+
+  // Remove defaults.css file.
+ unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/default.css']);
+ unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/bootstrap.css']);
+  unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/base.css']);
+
 }
 
 /**
@@ -257,12 +271,13 @@ function nysm_css_alter(&$css) {
 function nysm_js_alter(&$js) {
   // Always remove base theme JS.
   $theme_path = drupal_get_path('theme', 'zurb_foundation');
-
   foreach($js as $path => $values) {
     if(strpos($path, $theme_path) === 0) {
       unset($js[$path]);
     }
-  }
+}
+  $js[drupal_get_path('module', 'tb_megamenu') . '/js/tb-megamenu-frontend.js']['data'] = drupal_get_path('theme', 'nysm') . '/js/tb-megamenu-frontend.js';
+   unset($js [drupal_get_path('theme', 'nysm') . '/homepageanimation/js/jquery-2.0.3.min.js']);
 }
 
 
@@ -304,27 +319,6 @@ function nysm_preprocess_image(&$variables){
 
 
 /**
- * Helper function to output a Drupal menu as a Foundation Top Bar.
- *
- * @param array
- *   An array of menu links.
- *
- * @return string
- *   A rendered list of links, with no <ul> or <ol> wrapper.
- *
- * @see zurb_foundation_links__system_main_menu()
- * @see zurb_foundation_links__system_secondary_menu()
- */
-/** function nysm_links($links) {
-  $output = '';
-
-  foreach (element_children($links) as $key) {
-    $output .= nysm_preprocess_render_link($links[$key]);
-  }
-
-  return $output;
-}
-/**
  * Helper function to recursively render sub-menus.
  *
  * @param array
@@ -333,12 +327,9 @@ function nysm_preprocess_image(&$variables){
  * @return string
  *   A rendered list of links, with no <ul> or <ol> wrapper.
  *
- * @see _nysm_links()
+ * @see _zurb_foundation_links()
  */
-
-
-
-/** function nysm_preprocess_render_link($link) {
+function nysm_render_link($link) {
   $output = '';
 
   // This is a duplicate link that won't get the dropdown class and will only
@@ -367,7 +358,7 @@ function nysm_preprocess_image(&$variables){
     }
 
     // If this item is active and/or in the active trail, add necessary classes.
-     $active_classes = nysm_in_active_trail($link['#href']);
+    $active_classes = nysm_in_active_trail($link['#href']);
     if (isset($link['#attributes']['class'])) {
       $link['#attributes']['class'] = array_merge($link['#attributes']['class'], $active_classes);
     }
@@ -377,28 +368,32 @@ function nysm_preprocess_image(&$variables){
 
     // Test for localization options and apply them if they exist.
     if (isset($link['#localized_options']['attributes']) && is_array($link['#localized_options']['attributes'])) {
-  //    $link['#attributes'] = array_merge_recursive($link['#attributes'], $link['#localized_options']['attributes']);
-      $link['#attributes'] = array_merge($link['#attributes'], $link['#localized_options']['attributes']);
-   }
-    // Drupal add the 'active' class on links, but we add 'active-trail' to
-    // match Bartik theme
+      $link['#attributes'] = array_merge_recursive($link['#attributes'], $link['#localized_options']['attributes']);
+    }
+
+    // If this item is in the active trail, merge the active-trail class into
+    // the #localized_options.
     if (in_array('active-trail', $active_classes)) {
-      if(isset($link['#localized_options']['attributes']['class']) && is_array($link['#localized_options']['attributes']['class'])) {
+      if(isset($link['#localized_options']['attributes']['class'])) {
         $link['#localized_options']['attributes']['class'][] = 'active-trail';
       }
       else {
-        $link['#localized_options']['attributes']['class'] = array('active-trail');
-     }
-     }
-
-    // Render our link using the #localized_options array for the options
-    if (!isset($rendered_link)) {
-      $rendered_link = theme('zurb_foundation_menu_link', array('link' => $link));
+        $link['#localized_options']['attributes']['class'][] = 'active-trail';
+      }
     }
-    
+
+    // Only render our link now that all classes have been folded into the
+    // #localized_options array.
+    if (!isset($rendered_link)) {
+      $rendered_link = theme('nysm_menu_link', array('link' => $link));
+    }
+
     $output .= '<li' . drupal_attributes($link['#attributes']) . '>' . $rendered_link;
 
+    // Build lower menu levels
     if (!empty($link['#below'])) {
+      $sub_menu = '';
+
       // Add repeated link under the dropdown for small-screen.
       $small_link['#attributes']['class'][] = 'show-for-small';
       $sub_menu = '<li' . drupal_attributes($small_link['#attributes']) . '>' . l($link['#title'], $link['#href'], $link['#localized_options']);
@@ -406,7 +401,7 @@ function nysm_preprocess_image(&$variables){
       // Build sub nav recursively.
       foreach ($link['#below'] as $sub_link) {
         if (!empty($sub_link['#href'])) {
-          $sub_menu .= nysm_preprocess_render_link($sub_link);
+          $sub_menu .= nysm_render_link($sub_link);
         }
       }
 
@@ -418,7 +413,6 @@ function nysm_preprocess_image(&$variables){
 
   return $output;
 }
-
 
 /**
  * Checks whether an item is active or in the active trail.
@@ -436,66 +430,88 @@ function nysm_preprocess_image(&$variables){
  * @todo
  *   Look at migrating to a menu system level function.
  */
-/** function nysm_in_active_trail($link_path) {
+function nysm_in_active_trail($link_path) {
   $classes = array();
-  // if we're on the front page, we're either active or not and we don't need
-  // to process anything else. This simplifies the rest too.
-  if ($link_path == '<front>' &&  drupal_is_front_page()) {
-    $classes[] = 'active';
-    return $classes;
-  }
-  if ($link_path != '<front>' &&  drupal_is_front_page()) {
+  $active_paths = array();
+
+  // Don't waste cycles: if we're on the front page, we're either active or not
+  // and we don't need to look at the rest of the tree.
+  if (drupal_is_front_page()) {
+    if ($link_path == '<front>') {
+      $classes[] = 'active';
+    }
     return $classes;
   }
 
-  // If the current page matches the item path,it's active.
-  // If you comment out the return statement, you'll get both 'active' and
-  // 'active-trail' classes if the the item is in a menu hierarchy
+  // If the current page matches the item path, it's active and we don't need to
+  // look further. Comment out the return statement to have both 'active' and
+  // 'active-trail' classes applied to the item for the current page.
   if ($link_path == current_path()) {
     $classes[] = 'active';
     return $classes;
   }
 
-  // We're not on the front page so we need to check to see if we're in the
-  // active trail even for active items in keeping with Bartik style.
-  $active_paths = &drupal_static(__FUNCTION__);
-
-  // Gather active paths.
-  // We filter out <front> because we only want that active if we're on the
-  // front page.
-  if (!isset($active_paths)) {
-    $active_paths = array();
-    $trail = menu_get_active_trail();
-    foreach ($trail as $item) {
-      if (!empty($item['href']) && $item['href'] != '<front>') {
-        $active_paths[] = $item['href'];
-      }
+  // If we're not on the front page and the current link is not the current page,
+  // The we need to check the whole active trail. Since Drupal caches the result
+  // of menu_get_active_trail(), this is not too costly.
+  $active_trail = menu_get_active_trail();
+  $front = array_shift($active_trail);
+  foreach ($active_trail as $item) {
+    if(!empty($item['link_path'])) {
+      $active_paths[$item['link_path']] = TRUE;
     }
   }
 
-  if (in_array($link_path, $active_paths)) {
+  if (!empty($active_paths[$link_path])) {
     $classes[] = 'active-trail';
   }
 
-  // If we haven't matched yet, we're not going to.
   return $classes;
 }
 
 
-/*function nysm_form_comment_form_alter(&$form, &$form_state, $form_id)
-  {
-    $form['comment_body']['#after_build'][] = 'remove_tips';
-  }
+
+/**
+ * Implements template_preprocess_html().
+ *
+ * Define custom classes for theming.
+ */
+function nysm_preprocess_html(&$vars) {
   
-  function remove_tips(&$form)
-  {
-    unset($form['und'][0]['format']['guidelines']);
-    unset($form['und'][0]['format']['help']);
-    return $form;
+  // Build a node types array from our targeted content types.
+  $types = array(
+    'exhibition',
+  );
+  
+    // Define the node.
+    $node = menu_get_object();
+    
+  // Use the array to add a class to those content types.
+  if (!empty($node) && in_array($node->type, $types)) {
+    // field_get_items() always returns an array, even if the field is limited to one value
+  
+  $ongoing = field_get_items('node', $node, 'field_is_ongoing');
+    $is_ongoing = $ongoing[0]['value'];
+    if ($is_ongoing == 1 ) {
+
+    $vars['classes_array'][] = 'ongoing_exhibitions';
+    }
+    else {  
+    $field_items = field_get_items('node', $node, 'field_start_date');
+    // Get the value from the first item in the array (if that's the one you need)
+    $title = strtotime($field_items[0]['value2']);
+      if ($title > strtotime("now")) {
+        $vars['classes_array'][] = 'current_exhibitions';
+      }
+      else {
+        $vars['classes_array'][] = 'past_exhibitions';
+      }
+
+  }
+    
   }
 
-*/
-
+}
 
 
 /**
@@ -662,18 +678,40 @@ function nysm_form_alter(&$form, &$form_state, $form_id) {
    $form['search_form']['searchform']['biblio_search']['submit']['#value'] = t('Find');
     $form['search_form']['filterform']['filters']['status']['filters']['type']['#access'] = TRUE;  //Hide type filter
     $form['search_form']['filterform']['filters']['status']['filters']['year']['#access'] = TRUE;  //Hide year filter
+     $form['search_form']['filterform']['filters']['status']['filters']['author']['#title'] = t('Author of Editor');
     $form['search_form']['filterform']['filters']['status']['filters']['author']['#access'] = TRUE;  //Hide author filter
+
     $form['search_form']['filterform']['filters']['status']['filters']['keyword']['#access'] = TRUE;  //Hide keyword
     $form['search_form']['filterform']['filters']['status']['filters']['term-id']['#access'] = FALSE;  //Hide keyword
   }
+   if ($form_id == 'google_appliance_block_form') {
+   $form['search_block_form']['#title'] = t('Search NYSM'); // Change the text on the label element
+   $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibility
+   $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+   $form['actions']['submit']['#value'] = decode_entities('&#xf002;'); // Change the text on the submit button
+ // $form['actions']['submit']['#type'] = 'markup'; //add fontawesome class
+  // $form['actions']['submit']['#attributes']['class'][] = "icon-search"; //add fontawesome class
+ // $form['actions']['submit']['#markup'] = '<i class="fa fa-search"></i>';
+   // unset($form['actions']['submit']['#value']); // Remove the value attribute from the input tag, since it is not valid when input type = image
+
+// $form['actions']['submit']['#prefix'] = '<button type="submit" id="edit-submit" value="Search">';
+// $form['actions']['submit']['#suffix'] = '</button>';
+    
+
+  //  $form['actions']['submit'] = array('#type' => 'button', '#src' => base_path() . path_to_theme() . '/images/icon-search.png');
+
+// Add extra attributes to the text box
+    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search Site';}";
+    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search Site') {this.value = '';}";
+  }
+
 }
 
 /**
  * Implements menu_link__main_menu.
  */
 
-
-function nysm_menu_link(&$variables) {
+/**function nysm_menu_link(&$variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -686,8 +724,9 @@ function nysm_menu_link(&$variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+*/
 
-function nysm_preprocess_menu_tree(&$variables) {
+/**function nysm_preprocess_menu_tree(&$variables) {
   $tree = new DOMDocument();
   @$tree->loadHTML($variables['tree']);
   $links = $tree->getElementsByTagname('li');
@@ -705,7 +744,7 @@ function nysm_menu_tree(&$variables) {
   return '<ul class="menu ' . $variables['menu_parent'] . '">' . $variables['tree'] . '</ul>';
 }
 
-
+*/
 
 /** function nysm_menu_alter(&$items) {
   $items['user/%user']['title callback'] = 'nysm_user_menu_title';

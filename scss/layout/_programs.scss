@@ -1,9 +1,9 @@
-.lecture, label[for=edit-field-event-category-value-lecture] {color:#00C618; }
-.music, label[for=edit-field-event-category-value-music]{color:#A600A6;}
-.children, label[for=edit-field-event-category-value-children039s-program] {color:#fa9f00;}
-.film, label[for=edit-field-event-category-value-film]{color:#d8cc11;}
-.tour, label[for=edit-field-event-category-value-guided-tour]{}
-.special, label[for=edit-field-event-category-value-special-event]{color:#FF0000;}
+.lecture, label[for=edit-field-event-category-type-value-lecture] {color:#00C618; }
+.music, label[for=edit-field-event-category-type-value-performance]{color:#A600A6;}
+.children, label[for=edit-field-event-category-type-value-family-program] {color:#fa9f00;}
+.film, label[for=edit-field-event-category-type-value-film]{color:#d8cc11;}
+.tour, label[for=edit-field-event-category-type-value-guided-excursion]{}
+.special, label[for=edit-field-event-category-type-value-special-event]{color:#FF0000;}
 
 //.page-programs .sidebar-first{@media (min-width:480px) {margin-top:5.5em;} }
 
@@ -11,12 +11,20 @@
   .view-filters {display:none;}
 }
 
+.field-name-field-event-location { ul {list-style-type:none; margin-left:0;}  }
+
 .calendar-list {
     .views-row{ @include nicebox(.5em, .7em);
     h2 {@include nysm-title(20); font-weight:normal; min-height:52px; margin-top:.5em;}
-    .program_cat{font-size: emCalc(12); text-transform: uppercase;}
-    .program_date{font-size: emCalc(14); font-weight: bold; line-height:emCalc(24); color:#454545;}
-    .program_location {font-size: emCalc(14); line-height:emCalc(24);  color:$nysm_blue;}
+   
+    .field-name-field-event-date{font-size: emCalc(14); font-weight: bold; line-height:emCalc(24); color:#454545;}
+    .field-name-field-event-series {
+      ul{list-style-type:none; margin:8px 0 -10px 0; li{font-size: emCalc(12); text-transform: uppercase;}}
+    }
+    .field-name-field-event-location {
+      ul {
+        li {font-size: emCalc(14); line-height:emCalc(24); }}
+       }
     .program_body{ p {font-size: emCalc(12); line-height:emCalc(24);}}
     .field-name-field-event-series {font-size:emCalc(12); margin-bottom:3px; color:#454545; font-weight:bold;text-transform: uppercase;}
 
@@ -53,3 +61,9 @@
     .date-display-single {font-size:emCalc(13);}
 }
  }
+
+.additional-dates {
+  .date-display-single {display:block;}
+} 
+
+// .datepicker-details-page { font-size:.8rem; line-height:.7rem;}

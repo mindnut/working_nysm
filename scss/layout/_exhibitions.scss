@@ -6,15 +6,22 @@
 	 }
 }
 
-.current-exhibitions {
-	.views-row-3, .views-row-5, views-row-7 {clear:left;}
-	 [class*="column"] + [class*="column"]:last-child {float: left }
-
-	.exhibition-thumb img {border:1px #e6e6e6 solid; }
-	.exhibition-details { margin:.2em 0 1.5em 0 ;
-	.exhibit-title {@include nysm-title()}
-	.exhibit-dates {font-size:emCalc(13)}
+.current-exhibition {
+	h2{margin-bottom:0;line-height:1em;
+	 a {@include nysm-title(18, 0); }
+	}
+	.field-name-field-start-date{font-size:emCalc(15);  color:#333;}
+	.field-name-field-exhibition-location ul{margin:0;
+	 li {list-style:none; 
+	 	font-size:emCalc(13); 
+	 	font-weight:700; 
+	 	color:#454545;
+	 	text-transform:uppercase;}
+	}
 }
+.ongoing-exhibition {
+	.exhibit-title a {@include nysm-title(14); line-height:.8em;}
+	.exhibit-dates {font-size:emCalc(12)}
 }
 
 .ongoing-exhibitions { .field-name-title{@include nysm-title(16) } 
@@ -31,14 +38,10 @@
 }
 
 .node-type-exhibition {
-	.field-name-exhibition-dates{font-size:emCalc(16); font-weight: bold; color:#454545;}
+	h2.pane-title{@include nysm-title(20)}
+	.field-name-field-start-date{font-size:emCalc(15);  color:#333; }
+	.pane-node-field-exhibition-location{font-size:emCalc(15);  color:#333; margin-bottom:1em; text-transform:uppercase;}
 	.exhibitdetail_location {font-size:emCalc(15); margin-top:emCalc(6);}
 	.exhibitdetail-description {margin-top:1em;}
 
-}
-
-.field-name-field-exhibition-location {
-	ul{ margin:0;
-		li{list-style:none;}
-	}
 }

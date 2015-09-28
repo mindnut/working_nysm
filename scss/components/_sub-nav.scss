@@ -16,26 +16,26 @@
 $include-html-nav-classes: $include-html-classes !default;
 
 // We use these to control margin and padding
-$sub-nav-list-margin: rem-calc(-4 0 18) !default;
+$sub-nav-list-margin: rem-calc(-4 0 0) !default;
 $sub-nav-list-padding-top: rem-calc(4) !default;
 
 // We use this to control the definition
 $sub-nav-font-family: $body-font-family !default;
-$sub-nav-font-size: rem-calc(14) !default;
-$sub-nav-font-color: $aluminum !default;
+$sub-nav-font-size: rem-calc(16) !default;
+$sub-nav-font-color: #ff0000 !default;
 $sub-nav-font-weight: $font-weight-normal !default;
-$sub-nav-text-decoration: none !default;
-$sub-nav-padding: rem-calc(3 16) !default;
-$sub-nav-border-radius: 3px !default;
-$sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%) !default;
-
+$sub-nav-text-decoration: uppercase !default;
+$sub-nav-padding: rem-calc(10 18) !default;
+$sub-nav-border-radius: 0px !default;
+$sub-nav-font-color-hover: scale-color($nysm_blue, $lightness: -25%) !default;
+  
 
 // We use these to control the active item styles
 
 $sub-nav-active-font-weight: $font-weight-normal !default;
-$sub-nav-active-bg: $primary-color !default;
+$sub-nav-active-bg: $primary_color !default;
 $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%) !default;
-$sub-nav-active-color: $white !default;
+$sub-nav-active-color: #fff !default;
 $sub-nav-active-padding: $sub-nav-padding !default;
 $sub-nav-active-cursor: default !default;
 
@@ -73,18 +73,23 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
   li {
     float: $default-float;
     display: inline;
-    margin-#{$default-float}: rem-calc(16);
+    //margin-#{$default-float}: rem-calc(16);
     margin-bottom: 0;
     font-family: $sub-nav-font-family;
     font-weight: $sub-nav-font-weight;
     font-size: $font-size;
     color: $font-color;
 
+
     a {
       text-decoration: $sub-nav-text-decoration;
-      color: $sub-nav-font-color;
+      color: $nysm_darkblue;
       padding: $sub-nav-padding;
+      background:rgba(256, 256, 256, 0.80);
+      border-left: solid 1px scale-color($nysm_blue, $lightness: +55%);
       &:hover {
+        background:rgba(256, 256, 256, 0.85);
+      
         color: $sub-nav-font-color-hover;
       }
     }
@@ -96,6 +101,7 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
       padding: $sub-nav-active-padding;
       cursor: $sub-nav-active-cursor;
       color: $sub-nav-active-color;
+      border-left:none;
       &:hover {
         background: $active-bg-hover;
       }

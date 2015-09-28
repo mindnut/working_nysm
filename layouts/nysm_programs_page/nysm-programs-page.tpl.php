@@ -15,15 +15,18 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
+<div class="banner-image"> <?php print $content['banner']; ?>
+<div class="pagesubnav"><?php print $content['subnav']; ?></div>
+</div>
 
-<div class="row program-page" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+<div class="row program-page main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   <div class="large-12 columns">
     <?php print $content['top']; ?>
   </div>
-  <div class="large-9 columns">
+  <div class="large-9 medium-8 columns">
     <?php print $content['left']; ?>
   </div>
-  <div class="large-3 columns" id="programs-nav">
+  <div class="large-3 medium-4 columns" id="programs-nav">
     <?php print $content['right']; ?>
   </div>
  

@@ -1,60 +1,31 @@
 <!--.page -->
-<div class="off-canvas-wrap" data-offcanvas>
-<div class="inner-wrap">
-<nav class="tab-bar show-for-small-only">
- <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-  </section>
-  <section class="middle tab-bar-section show-for-small-only">
-  <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/wordmark-white.png'?>" alt="<?php print t('Home'); ?>" /> </a>
-  </section>
-      </nav>
-
-    <aside class="left-off-canvas-menu">
-     <?php if (!empty($page['off_canvas_menu_data'])): ?>
-      <?php print render($page['off_canvas_menu_data']); ?>
-      <?php endif; ?>
-    </aside>
-
-<section class="main-section">
-
   <!--.l-header region -->
   <header role="banner" class="l-header">
- <div class="nysmshield show-for-large-up">
- <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/shield.png'?>"   alt="<?php print t('Home'); ?>" /> </a>
+ 
+<div class="columns large-centered row">
+
+<div class="logo large-8 columns hidden-for-small-only"> 
+   <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/shieldmark.png'?>" alt="<?php print t('Home'); ?>" /> </a>
 </div>
-<?php if (!empty($page['toplinks'])): ?>
-  <div class="toplinks">
-   <?php print render($page['toplinks']); ?>
-   </div>
-   <?php endif; ?>
-<div class="logo contain-to-grid hide-for-small-only"> 
-   <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/wordmark-white.png'?>" alt="<?php print t('Home'); ?>" /> </a>
-    </div>
-    <?php if ($top_bar): ?>
-      <!--.top-bar -->
-      <?php if ($top_bar_classes): ?>
-      <div class="<?php print $top_bar_classes; ?> nysmnav hidden-for-small-only">
-      <?php endif; ?>
-        <nav class="top-bar"<?php print $top_bar_options; ?>>
-          <ul class="title-area">
-            <li class="name"><h1><?php print $linked_site_name; ?></h1></li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
-          </ul>
-          <section class="top-bar-section">
-            <?php if ($top_bar_main_menu) :?>
-              <?php print $top_bar_main_menu; ?>
-            <?php endif; ?>
-            <?php if ($top_bar_secondary_menu) :?>
-              <?php print $top_bar_secondary_menu; ?>
-            <?php endif; ?>
-          </section>
-        </nav>
-      <?php if ($top_bar_classes): ?>
-      </div>
-      <?php endif; ?>
-      <!--/.top-bar -->
+
+    <div class="columns large-4">
+     <?php if (!empty($page['toplinks'])): ?>
+      <div class="toplinks">
+       <?php print render($page['toplinks']); ?>
+       </div>
     <?php endif; ?>
+    </div>
+</div>
+  
+  
+      <!--.top-bar -->
+     
+      <div class="<?php print $top_bar_classes; ?> nysmnav ">
+       <?php if (!empty($page['mainmenu'])): ?>
+       <?php print render($page['mainmenu']); ?>
+       <?php endif; ?>
+    
+
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
     <section class="row <?php print $alt_header_classes; ?>">
@@ -191,33 +162,33 @@
     </section>
     <!--/.triptych -->
   <?php endif; ?>
+    </div>
+  <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
+
+  <div class="nysm-footer">
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
     <!--.footer-columns -->
+
     <section class="row l-footer-columns">
       <?php if (!empty($page['footer_firstcolumn'])): ?>
-        <div class="footer-first large-3 columns">
+        <div class="footer-first large-5 columns">
           <?php print render($page['footer_firstcolumn']); ?>
         </div>
       <?php endif; ?>
-      <?php if (!empty($page['footer_secondcolumn'])): ?>
-        <div class="footer-second large-3 columns">
-          <?php print render($page['footer_secondcolumn']); ?>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_thirdcolumn'])): ?>
+           <?php if (!empty($page['footer_thirdcolumn'])): ?>
         <div class="footer-third large-3 columns">
           <?php print render($page['footer_thirdcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_fourthcolumn'])): ?>
-        <div class="footer-fourth large-3 columns">
+        <div class="footer-fourth large-4 columns">
           <?php print render($page['footer_fourthcolumn']); ?>
         </div>
       <?php endif; ?>
     </section>
     <!--/.footer-columns-->
   <?php endif; ?>
-  <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
+
   </div>
   <!--.l-footer-->
   <footer class="l-footer panel" role="contentinfo">
@@ -233,8 +204,4 @@
     <?php endif; ?>
   </footer>
   <!--/.footer-->
-</section>
- <a class="exit-off-canvas"></a>
 <!--/.page -->
-</div>
-</div>

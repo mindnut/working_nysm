@@ -26,10 +26,10 @@
   </div>
 
  
-  <div class="large-10 columns">
+  <div class="large-9 columns">
     <?php print $content['main']; ?>
   </div>
- <div class="large-2 columns">
+ <div class="large-3 columns">
     <?php print $content['right']; ?>
   </div>
   <div class="large-12 columns">

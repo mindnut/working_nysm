@@ -1,74 +1,113 @@
-.banner-image { position:relative; width:100%;
-.pagesubnav {width:100%; position:absolute; bottom:0; background-color:rgba(100, 100, 100, 0.80);
-
-.sub-nav {  max-width: 1100px;  margin: 0 auto !important; margin:0; padding-top:0; padding-bottom:10px;}
-
- // .mid-nav {min-height:26px; background:$nysm-blue;   }
-.exhibitions {background-color:red; width:100%}
-}
-}
-
-.pane-superfish {
-  h2{margin-bottom:0;
-    font-size:emCalc(16);
-    text-transform: uppercase;
-    border-bottom:1px #cdcdcd solid;
-    color:#454545;
-  }
-}
-
-.sf-vertical{
-width:100%;
-  li {
-  	width:100%;
-  	margin:0 0 9px 0;
-    padding: 0 0 9px 0;
-    text-transform: capitalize;
-    font-size:emCalc(13);
-    border-bottom:1px solid #e2e2e2;
-    
-    &.first{
-      a {font-size:emCalc(17);
-        font-weight: bold;
-        text-transform: uppercase;
-        color:#454545;
-        padding-bottom:6px;
-        } }
+.banner-image { position:relative; width:100%; overflow:hidden;
  
-    &:not(.first).active-trail {a {color:$nysm_blue;}}
-    &.last {}
+      
+  .pane-title {position:absolute; top:15px; width:100%; 
+    
+    .section-heading{max-width: 1000px;  margin: 0 auto !important; margin:0;}
+  }
+    img { flex-shrink:0;
+        min-width:100%;
+    height:auto;}
+      .pagesubnav {width:100%; position:absolute; bottom:-1px; background:rgba(256, 256, 256, 0.0) image-url('menu-shadow.png') bottom repeat-x !important;
+      
 
-    &:hover ul,
-    &.sfHover ul {
-    text-decoration: underline;
-    }
+      h2.pane-title {display:none;}
 
-    a {
-      padding: 0 0;
-      color:#656565;
-      &:hover {color:$nysm_blue;}
+
+    .menu-name-main-menu {max-width: 1100px;  margin: 0 auto !important; margin:0; padding:6px 0; @extend .sub-nav; @extend .large-centered; @extend .hide-for-small-only;
+      li a { @media #{$medium-only}{font-size:.9rem;}
+  @media #{$large-up}{font-size:1rem;}
+  @media (min-width: 641px) and (max-width: 757px) {font-size:.75rem;}}
+    //  .exhibitions {background-color:red; width:100%}
     }
   }
 }
 
-.sub-nav ul {
-	margin-bottom: rem-calc(10);
+.panels-ipe-editing {.banner-image{position:static; .pagesubnav {position:static; .menu-name-menu-research-collections {background-color:#777;}}}}
+
+.node-type-research-project {
+  .pagesubnav {
+    ul.menu{
+      li.research {@extend .active;}
+    }
+  }
 }
 
+.node-type-press-release {
+  .pagesubnav {
+    ul.menu{
+      li.press {@extend .active;}
+    }
+  }
+}
+
+.page-user  {
+   .pagesubnav {
+    ul.menu{
+      li.contact {@extend .active;}
+    }
+  }
+}
+
+.node-type-collection, .collections-term-page, .extended-collections-list  {
+   .pagesubnav {
+    ul.menu{
+      li.collection {@extend .active;}
+    }
+  }
+}
+
+.ongoing_exhibitions {
+  .pagesubnav {
+    ul.menu{
+      li.ongoing {@extend .active;}
+    }
+  }
+}
+
+.current_exhibitions {
+  .pagesubnav {
+    ul.menu{
+      li.current {@extend .active;}
+    }
+  }
+}
+
+.past_exhibitions {
+  .pagesubnav {
+    ul.menu{
+      li.past {@extend .active;}
+    }
+  }
+}
+
+//.page-taxonomy-term {
+//   .pagesubnav {
+ //   ul.menu{
+  //    li.department {@extend .active;}
+ //   }
+ // }
+// }
+
+.node-type-article{
+   .pagesubnav {
+    ul.menu{
+      li.news {@extend .active;}
+    }
+  }
+}
 
 // Top Bar
 //--------------------------------------------------
 .nysmnav {
- background: white image-url('menu-shadow.png') bottom repeat-x !important;
-  border-top: 1px solid $nysm_yellow;
-  padding-bottom: 4px;
+ //background: rgba(256, 256, 256, 0.25)  image-url('menu-shadow.png') bottom repeat-x !important;
+ border-top:1px solid $nysm_yellow;
+//  padding-bottom: 4px;
 //  margin-bottom:-4px;
 }
 
-.top-bar {
-  .title-area {}
 
-
+  
 
   ul.main-nav li {
     border-right:1px dotted #fbfbfb;
@@ -76,9 +115,7 @@ width:100%;
     & a{
   	 padding-bottom:-2px;
   	 border-bottom: 2px solid transparent;
-      @include transition-property(border);
-      @include transition-duration(.2s); 
-      @include transition-timing-function(ease-in);
+      
   	   &:hover {
   		  border-bottom: 2px solid $nysm_blue;
   	   }
@@ -91,11 +128,8 @@ width:100%;
     &.active-trail {border-bottom: 2px solid $nysm_blue;}
     
    
-    } ul.dropdown {
-      li {
-      a.active{border-bottom:none;}}
-    }
+    } 
 
   }
 
-}
+.tb-megamenu-main-menu{ .nav-collapse{@extend .row;}}

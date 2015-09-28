@@ -23,10 +23,10 @@
   <div class="large-12 columns">
     <?php print $content['top']; ?>
   </div>
-  <div class="large-8 columns">
+  <div class="large-9 columns">
     <?php print $content['mainstory']; ?>
   </div>
-  <div class="large-4 columns">
+  <div class="large-3 columns">
     <?php print $content['topright']; ?>
   </div>
 </div> <!-- panels row -->
