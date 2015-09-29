@@ -138,12 +138,12 @@ ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
 }
 
 .homepage-programs {
-     h2{@extend h4;}
+     h2{@include nysm-title(14, 0)}
   .homepage-calendar-list { 
-     .views-row{ @include nicebox(.25em, 0);
-     .field-name-field-event-date {font-size:.9rem;line-height:.7rem;}
-     .field-name-field-event-location ul{li{font-size:.9rem;}}
-     .field-name-field-event-category-type {font-size:.9rem; line-height:.7rem;}
+     .views-row{ 
+     .field-name-field-event-date {font-size:.8rem;line-height:.7rem;}
+     .field-name-field-event-location ul{li{font-size:.8rem;}}
+     .field-name-field-event-category-type {font-size:.8rem; line-height:.7rem;}
    }
   }
 }

@@ -30,10 +30,7 @@
   @else if $point == mobile {
     @media (max-width: 480px)  { @content; }
   }
-  
-
 }
-
 
 @mixin nysm-title($sized: 14, $botmargin: 8px){ font-family: "gothambold"; font-size:emCalc($sized); margin-bottom:$botmargin;}
 
@@ -50,6 +47,3 @@ $default-text-shadow-blur: 14px;
 $default-text-shadow-v-offset: 1px
 
 // Section Colors
-
-
-
