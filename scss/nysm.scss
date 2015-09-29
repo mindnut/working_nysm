@@ -39,45 +39,45 @@
 // Comment out this import if you don't want to use normalize.
 @import "normalize";
 
-@import "bourbon";
+//@import "bourbon";
 @import "compass";
 @import "base/mixins";
 
 // Comment out the imports you don't need below.
 @import "components/grid";
-@import "components/accordion";
+//@import "components/accordion";
 @import "components/alert-boxes";
 @import "components/block-grid";
-@import "components/breadcrumbs";
+//@import "components/breadcrumbs";
 @import "components/button-groups";
 @import "components/buttons";
-@import "components/clearing";
-@import "components/dropdown";
-@import "components/dropdown-buttons";
+//@import "components/clearing";
+//@import "components/dropdown";
+//@import "components/dropdown-buttons";
 @import "components/flex-video";
 @import "components/forms";
-@import "components/icon-bar";
+//@import "components/icon-bar";
 @import "components/inline-lists";
-@import "components/joyride";
-@import "components/keystrokes";
-@import "components/labels";
-@import "components/magellan";
-@import "components/orbit";
+//@import "components/joyride";
+//@import "components/keystrokes";
+//@import "components/labels";
+//@import "components/magellan";
+//@import "components/orbit";
 @import "components/pagination";
 @import "components/panels";
-@import "components/pricing-tables";
-@import "components/progress-bars";
-@import "components/range-slider";
-@import "components/reveal";
-@import "components/side-nav";
-@import "components/split-buttons";
+//@import "components/pricing-tables";
+//@import "components/progress-bars";
+//@import "components/range-slider";
+//@import "components/reveal";
+//@import "components/side-nav";
+//@import "components/split-buttons";
 @import "components/sub-nav";
-@import "components/switches";
+//@import "components/switches";
 @import "components/tables";
-@import "components/tabs";
+//@import "components/tabs";
 @import "components/thumbs";
 @import "components/tooltips";
-@import "components/top-bar";
+//@import "components/top-bar";
 @import "components/type";
 //@import "components/offcanvas";
 @import "components/visibility";
@@ -106,9 +106,9 @@
 
 @import "components/font-awesome-compass";
 @import "components/font-awesome";
-@include font-face("gotham", font-files("gotham-medium-webfont.woff", woff, "gotham-medium-webfont.otf", opentype), "gotham-medium-webfont.eot");
-@include font-face("gothambook", font-files("gotham-book-webfont.woff", woff, "gotham-book-webfont.otf", opentype), "gotham-book-webfont.eot");
-@include font-face("gothambold", font-files("gotham-medium-webfont.woff", woff, "gotham-medium-webfont.otf", opentype), "gotham-medium-webfont.eot");
+@include font-face("gotham", font-files("gotham-medium-webfont.woff", woff), "gotham-medium-webfont.eot");
+@include font-face("gothambook", font-files("gotham-book-webfont.woff", woff), "gotham-book-webfont.eot");
+@include font-face("gothambold", font-files("gotham-medium-webfont.woff", woff), "gotham-medium-webfont.eot");
 
 // Layout
 // Each section of the document has it's own partial seperated out to improve

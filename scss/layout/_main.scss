@@ -7,7 +7,7 @@ body {background:#fbfbfb image-url('nysm-backgrounda.png') 50% 0 no-repeat fixed
 
 .banner-image {.pane-fieldable-panels-pane{ h2.pane-title{display:none;}}}
 
-.page-entityform, .section-user, .section-node-add{ .page {@extend .row; }}
+.page-entityform, .section-user, .section-node-add{ .page { @include containment(); }}
 
 .l-main {min-height:100%; margin-bottom: 3em; }
 .main-body {margin-top:2em; } 
@@ -120,8 +120,8 @@ ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
     }
   }
 .page-gsearch { 
-  #main { @extend .row; } 
-  .page-search-form { @extend .column; display:inline;
+  #main { @include containment; } 
+  .page-search-form { float:left; display:inline;
       .form-type-textfield { 
       input[type="text"]{width:70%; display:inline;}
       }
@@ -149,7 +149,7 @@ ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
 }
 
 .now-on-view{
-  h2{@extend h4;}
+  h2{@include nysm-title(15, 0)}
   .views-row{ margin-bottom:.5rem;
     .view-mode-exhibits_list_for_homepage{ 
       h3 {@include nysm-title(16, 0)}

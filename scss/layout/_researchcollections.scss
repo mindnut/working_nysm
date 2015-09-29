@@ -1,8 +1,4 @@
-.section-publications, .section-research-collections {
-    nav.top-bar{ 
-    	li#researchcollection {a.researchcollection {@extend .active-trail;}}
-	}
-}
+
 
 //.page-taxonomy-term-42, .page-taxonomy-term-70, .page-research-collections-archaeology {
  // .main-body {
@@ -59,16 +55,13 @@
 
 .research-dept {
 	.staff-extended-list {@include nicebox(.5em, 1em);
-	.field-name-field-displayed-name{@extend h3; margin-bottom:-3px}
+	.field-name-field-displayed-name{@include nysm-title(15, 0); margin-bottom:-3px}
 	.field-name-field-nysmjob-title{; margin:.3em 0; line-height:1rem; margin-top:5px; color:#444;  }
 	.field-name-field-education-background p{font-size:emCalc(12);}
 }
 }
 //.pane-term-description {@include nysm-title(15, 0)}
-.pane-contributor {
-
-}
 
 .field-name-field-collection-type { ul {list-style-type:none; margin-left:0;}  }
 
-.page-taxonomy-term-25 { .view-departments {.view-header{@include nicebox(.5em, .1em); p{@extend h2;}}} }
+//.page-taxonomy-term-25 { .view-departments {.view-header{@include nicebox(.5em, .1em); p{@include nysm-title(16, 0);}}} }

@@ -16,6 +16,6 @@
  */
 ?>
 <div class="banner-image"> <?php print $content['banner']; ?>
-<div class="pagesubnav"><?php print $content['subnav']; ?></div></div>
+<div class="pagesubnav sub-nav hide-for-small-only"><?php print $content['subnav']; ?></div></div>
 
  <!-- panels row -->

@@ -39,11 +39,15 @@
 @mixin containment{
       max-width: $row-width;
       margin: 0 auto;
-      margin-bottom: $topbar-margin-bottom;
+     // margin-bottom: $topbar-margin-bottom;
     }
 
 $default-text-shadow-color: rgba(black, 0.6);
 $default-text-shadow-blur: 14px;
 $default-text-shadow-v-offset: 1px
+
+
+
+
 
 // Section Colors

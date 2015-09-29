@@ -22,7 +22,7 @@ h4 {@include nysm-title(15);}
 h2.pane-title, h2.page-title, .view-header h2 {font-family: "gothambold"; }
 
 .pane-departments, .pane-research-projects, .pane-collections, .pane-news {
-h2.pane-title {@extend h4;}
+h2.pane-title {@include nysm-title(15);}
 }
 
 .field-name-field-days-of-availability, .form-item-field-placement-possibilities-und {.form-type-checkbox {display:inline-block;}}

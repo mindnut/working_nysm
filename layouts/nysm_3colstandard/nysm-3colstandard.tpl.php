@@ -16,7 +16,7 @@
  */
 ?>
 <div class="banner-image"> <?php print $content['banner']; ?>
-<div class="pagesubnav"><?php print $content['subnav']; ?></div></div>
+<div class="pagesubnav sub-nav hide-for-small-only"><?php print $content['subnav']; ?></div></div>
 
 <div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   <div class="large-12 columns">
