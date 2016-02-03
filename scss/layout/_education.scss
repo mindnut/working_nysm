@@ -1,0 +1,86 @@
+.pane-class-accordion, .pane-museum-tour-prep-list { margin-bottom:1em;
+
+	ul.accordion {margin:0;
+
+	li { border-top: 1px solid #fafafa; i.arrowed {margin-right:4px; @extend .fa-angle-right; color:$nysm_darkblue;}}
+	li.active {i.arrowed {margin-right:0; @extend .fa-angle-down;}}
+	.mini-panel-code_of_conduct {ul{ margin:1.25em; 
+		li:before {
+				content: "[&#xf0f9;]"; /* FontAwesome char code inside the '' */
+				  font-family: FontAwesome; /* FontAwesome or whatever */
+				  display: inline-block;
+				  width: 1.2em; /* same as padding-left set on li */
+				  margin-left: -1.2em; /* same as padding-left set on li */
+				}}}
+	}
+}
+
+.pane-museum-tour-prep-list  { i.fa {margin-right:8px; color:$nysm_darkblue;}}
+
+.page-education-teacher-workshops{.field-name-field-time-instructions{ color:$nysm_blue;}}
+
+.views-field-field-nys-standards {text-transform:uppercase; color:$nysm_blue; font-size:.9rem;}
+
+.view-id-class_schedule { 
+	.view-mode-simple_list{ margin-bottom:1rem; border:1px solid #dfdfdf;
+		.field-name-field-chosen-program {background:$nysm_darkblue; padding:.5rem; .field-name-title h4 {color:white;}}
+		.field-name-field-assigned-educator, .when {background:#dfdfdf; padding:.5rem;}
+		.view-mode-simple_name {display:inline;float:left;}
+		.field-label {font-size:.75rem;}
+		.field-group-fieldset h3 {color:$nysm_blue; font-size:.8rem; font-weight:bold;}
+		.group-left {padding-left:1rem;}
+//		.group-left, .group-middle, .group-right{background:white;}
+		.field-name-field-quick-notes {font-size:.8rem;
+			.field-label {color:$nysm_blue;}}
+
+	}
+}
+
+.addtocal {  @extend .button; }
+
+.view-display-id-class_schedule_daily{
+ tr {.views-field-field-appointment-time {font-family:"gothambold"; font-size:1rem;}}
+.views-field-field-chosen-program-1 {.class-name{font-family:"gothambold"; font-size:1rem;} }
+ table {width:100%}
+}
+
+.view-class-schedule, .view-school-groups{.views-exposed-form {display:none;}}
+
+.school-info {margin-bottom:.5rem; padding:.5rem; border:1px #aaa solid; background:rgba(245, 245, 255, 0.9);
+	.school-name{ font-family:"gothambold"; font-size:1.25rem;}
+	.school-notes {font-size:.85rem; margin-bottom:.5rem;
+		.note {@include nicebox(.5em, 1em);}}
+	.views-field-field-scheduled-time {text-align:center;}
+	.views-field-edit-entityform {text-align:right;}
+
+	 @media print {.views-field-edit-entityform {display:none;}}
+}
+ .view-display-id-class_schedule_daily, .view-display-id-rundown_wlunch, .view-display-id-class_weekly, .view-display-id-lunch_schedule_rundown, .view-id-class_schedule.view-display-id-block_7 {
+ 	table {width:100%;
+ 		caption {text-align:left;}
+ 	.time {font-family:"gothambold"; font-size:1rem; display:inline;}   
+ 	.program-block {display:inline;}
+ 	.views-field-field-appointment-time, .program-block {font-family:"gothambold"; font-size:1rem;}
+ 	//.lunchtime{margin-left:2rem;}
+	 }
+}
+.view-school-groups.view-display-id-block_2, .view-school-groups.view-display-id-block_3 {.view-header h2{ line-height:1.5rem; text-align:right;}}
+
+
+
+//ADMIN views
+
+.page-education-group-schedule { @media screen {#main { max-width:$row-width; margin:0 auto; }}
+#page-title {@media print {display:none;}}
+
+}
+.view-class-schedule.view-display-id-block_8 { margin-top:.5rem;
+	table {width:100%; border-color:#ddd;
+		thead{
+			tr{display:none;}
+			}
+		}
+		tr.simple {
+			td {padding:.25rem .25rem;}
+		}
+}

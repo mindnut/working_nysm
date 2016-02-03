@@ -1,0 +1,50 @@
+.ctools-collapsible-processed { clear:both;
+      .ctools-toggle {
+      position:relative;
+      }
+      .ctools-toggle:before {  
+        content:"\f107";
+        font-family: "FontAwesome";
+        position: absolute;
+
+        top:.85em;
+        left:.9em;
+      }
+
+     h2.pane-title {font-size:1rem; font-weight:normal; padding:1em 1em 1em 1.5em; background:#e3e3e3;  font-family:"gothambold"; color:$nysm_blue; margin-bottom:0;}
+     .ctools-collapsible-content {@extend .column; background:white; padding-top:.5em; margin-bottom:1em;}
+
+}
+
+.ctools-collapsed {
+      .ctools-toggle-collapsed {
+      position:relative;
+      }
+      .ctools-toggle-collapsed:before {  
+        content:"\f105";
+        font-family: "FontAwesome";
+        position: absolute;
+        top:.85em;
+        left:1em;
+      }
+   h2.pane-title {font-size:1rem; font-weight:normal; padding:1em 1em 1em 1.5em; background:#efefef; font-family:"gothambook"; color:$nysm_blue;
+  &:hover { background: #e3e3e3;}}
+
+}
+
+.ctools-collapsible-container .ctools-collapsible-handle {
+  display: none;
+}
+
+html.js .ctools-collapsible-container .ctools-collapsible-handle {display: block;
+}
+
+.ctools-collapsible-container .ctools-collapsible-handle {
+  cursor: pointer;
+}
+
+.ctools-collapsible-container .ctools-toggle-collapsed {
+ // background-image: url(../images/collapsible-collapsed.png);
+}
+
+

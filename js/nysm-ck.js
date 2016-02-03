@@ -1,1 +1,0 @@
-(function(e,t){t.behaviors.nysm={attach:function(t,n){e("#nav").localScroll(800);e("body").parallax("50%",.1);e(".highlighted-image").parallax("50%",0)}}})(jQuery,Drupal);

@@ -20,18 +20,18 @@
 
 <div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   
-  <div class="large-12 ">
+  <div class="medium-12 ">
     <?php print $content['top']; ?>
   </div>
 
-  <div class="large-3 columns">
+  <div class="medium-3 columns">
     <?php print $content['middleleft']; ?>
   </div>
-  <div class="large-9 columns">
+  <div class="medium-9 columns">
     <?php print $content['middleright']; ?>
   </div>
 
-  <div class="large-12 ">
+  <div class="medium-12 ">
     <?php print $content['bottom']; ?>
   </div>
 

@@ -20,21 +20,21 @@
 
 
 <div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
-  <div class="large-12 columns">
+  <div class="medium-12">
     <?php print $content['top']; ?>
   </div>
-
-   <div class="large-4 medium-4 columns">
+    <div class="row">
+   <div class="medium-4 medium-4 columns">
     <?php print $content['left']; ?>
   </div>
-  <div class="large-6 medium-8 columns">
+  <div class="medium-6 medium-8 columns">
     <?php print $content['middle']; ?>
   </div>
-  <div class="large-2 columns">
+  <div class="medium-2 columns">
     <?php print $content['right']; ?>
   </div>
-
-  <div class="large-12 columns">
+</div>
+  <div class="medium-12">
     <?php print $content['bottom']; ?>
   </div>
 

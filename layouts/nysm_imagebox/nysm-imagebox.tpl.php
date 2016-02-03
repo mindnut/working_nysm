@@ -16,11 +16,14 @@
  */
 ?>
 
-<div class="large-12" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
-  
-  <div class="large-12  photo-container" >
+<div class="<?php print $classes;?>" >
+<div class="image-box-bg" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+  <div class="small-12  photo-container" >
     <?php print $content['top']; ?>
-    <div class="large-12 title-caption">
-    <?php print $content['bottom']; ?>
-  </div></div>
-</div> <!-- panels row -->
+	    <div class="small-12 title-caption">
+	    <?php print $content['bottom']; ?>
+	  	</div>
+  </div>
+</div>
+</div>
+<!-- panels row -->

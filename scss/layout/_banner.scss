@@ -1,0 +1,37 @@
+.pane-bundle-short-header{ .highlighted-image {min-height: 225px;}}
+.pane-bundle-fieldable-panels-pane, .pane-bundle-random-image-header, .pane-substitute-event-panel {
+    .highlighted-image {max-height:300px; }
+    
+  }
+
+ .pane-substitute-exhibit-panel.highlighted-image, .pane-substitute-event-panel.highlighted-image {max-height:300px; }
+
+.banner-image {.pane-fieldable-panels-pane{ h2.pane-title{display:none;}}}
+
+.banner-image { position:relative; width:100%; overflow:hidden;
+  .pane-title {position:absolute; top:15px; width:100%; 
+    .section-heading{max-width: 1000px;  margin: 0 auto !important; margin:0;
+      h1 {
+        font-size: 2rem; 
+        color:white;
+        font-family:"gothambold";
+        @include single-text-shadow;
+        @media #{$large-up} { font-size: 4rem; }
+        @media #{$medium-only}{font-size:3rem; margin-left:15px;}
+        @media (min-width: 641px) and (max-width: 757px) {font-size:2.5rem; margin-left:15px;}
+        a {color:white;}    
+      }
+    }
+  }
+  picture { flex-shrink:0; min-width:100%;height:auto;
+    img{min-width:100%;}}
+     .pagesubnav {width:100%; position:absolute; bottom:-1px; background:rgba(255, 255, 255, 0.0) image-url('menu-shadow.png') bottom repeat-x !important;
+          h2.pane-title {display:none;}
+          .menu-name-main-menu, .menu-name-menu-chartering {max-width: 1050px;  margin: 0 auto !important; margin:0; padding:12px 0;
+              li a { @media #{$medium-only}{font-size:.9rem;}
+              @media #{$large-up}{font-size:1rem;}
+              @media (min-width: 641px) and (max-width: 757px) {font-size:.75rem;}}
+    //  .exhibitions {background-color:red; width:100%}
+          }
+      }
+}

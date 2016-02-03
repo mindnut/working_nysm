@@ -16,12 +16,12 @@
  */
 ?>
 
-<div class="large-12" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
+<div class="medium-12" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   
-  <div class="large-12  top-pane" >
+  <div class="medium-12  top-pane" >
     <?php print $content['top']; ?>
   </div>
-  <div class="large-12 bottom-pane">
+  <div class="medium-12 bottom-pane">
     <?php print $content['bottom']; ?>
   </div>
 </div> <!-- panels row -->

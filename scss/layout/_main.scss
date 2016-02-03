@@ -1,45 +1,16 @@
 // Non-modular or client styles for the .l-content region.
 
 body {background:#fbfbfb image-url('nysm-backgrounda.png') 50% 0 no-repeat fixed;
-@include breakpoint(all-mobile) {background: #fbfbfb image-url('nysm-background.pnga') bottom right no-repeat fixed;
+@include breakpoint(all-mobile) {background: #fbfbfb image-url('nysm-backgrounda.png') bottom right no-repeat fixed;
 @include background-size(cover)}
 }
 
-.banner-image {.pane-fieldable-panels-pane{ h2.pane-title{display:none;}}}
 
-.page-entityform, .section-user, .section-node-add{ .page { @include containment(); }}
+
+.page-entityform, .section-user, .section-node-add, .node-type-scheduled-group-programs{ .page { @include containment(); }}
 
 .l-main {min-height:100%; margin-bottom: 3em; }
 .main-body {margin-top:2em; } 
-
-.pane-bundle-short-header{ .highlighted-image {min-height: 225px;}}
-.pane-bundle-fieldable-panels-pane {.highlighted-image {max-height:300px; }}
-
-.highlighted-image {
- // background:50% 0;50
- // position:relative;
- // width:100%;
- // padding: 0;
- // @include breakpoint(tablet){height:250px;}
- // @include breakpoint(mobile){height:200px;}
-
-  .pane-title{
-  //    background-color:rgba(100, 100, 100, 0.50);
-  //     margin:0;
-  //    padding:1.5em;
-
-      .section-heading h1 {
-      font-size: 2rem; 
-      color:white;
-      font-family:"gothambold";
-      @include single-text-shadow;
-      @media #{$large-up} { font-size: 4rem; }
-      @media #{$medium-only}{font-size:3rem;}
-      @media (min-width: 641px) and (max-width: 757px) {font-size:2.5rem;}
-      a {color:white;}    
-    }
-  }
-}
 
 
 .main-body{h2.pane-title{font-family:"gothambold"; }}
@@ -50,13 +21,22 @@ body {background:#fbfbfb image-url('nysm-backgrounda.png') 50% 0 no-repeat fixed
 
 ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
 
-.nice-box { @include nicebox(.5em, .5em);}
+.nice-box { @include nicebox(1em, 1em);}
 
 .highlighted-story, .main-story, .other-news { @include nicebox(.5em, .7em);border-bottom:#e7e7e7 1px solid;
  h2 {margin-bottom:0;}
  .field-name-department-and-date{margin-bottom:.5em;font-size:emCalc(15);}
  .body {font-size:emCalc(14);}
 }
+
+.front { 
+  .news-list{ 
+    
+    .bottom-pane{padding-bottom:.5rem; margin-bottom:1rem; border-bottom: solid #e7e7e7 1px; } 
+  } 
+}
+
+.field-name-date-published-and-dept {text-transform:uppercase; font-size:.9rem;}
 
 .about-rc { @include nicebox(.5em, .7em);
   p {font-size: emCalc(14);} 
@@ -96,27 +76,27 @@ ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
   padding: none;
 }
 
-
 .homepage-animation {
   width:100%;
   height:400px;
 }
 
-.image-box-bg { max-width:390px;
-  .photo-container{position:relative; width:100%;}
-  .title-caption {width:100%; position:absolute; bottom:0; background-color:rgba(100, 100, 100, 0.80);
-      .section-heading h2 {
+.pane-bundle-clickable-image-box {.fieldable-panels-pane{margin-bottom:.5em;}
+  .view-mode-4_up {padding-left: .25rem; padding-right: .25rem;}}
+
+.image-box-bg { position:relative; width:100%; 
+  .photo-container img{position:relative; width:100%; overflow:hidden;}
+  .title-caption {width:100%; position:absolute; bottom:0; left:0; background-color:rgba(100, 100, 100, 0.80);
+     h2 {
       font-size: 1em;
       color:white;
       font-family:"gothambold";
       @include single-text-shadow;
-      max-width: 1100px;
+      max-width: 100%;
       margin: 0 auto;
       padding:.5em;
       a {color:white;}    
     }
-    
-
     }
   }
 .page-gsearch { 
@@ -137,24 +117,29 @@ ul.breadcrumbs {padding:emCalc(5) 0 0 emCalc(10); margin-bottom:0;}
 .field-name-field-food-options {font-size:.8rem; font-family:"gothambold"; color:#454545;}
 }
 
-.homepage-programs {
-     h2{@include nysm-title(14, 0)}
-  .homepage-calendar-list { 
-     .views-row{ 
-     .field-name-field-event-date {font-size:.8rem;line-height:.7rem;}
-     .field-name-field-event-location ul{li{font-size:.8rem;}}
-     .field-name-field-event-category-type {font-size:.8rem; line-height:.7rem;}
-   }
-  }
-}
 
-.now-on-view{
-  h2{@include nysm-title(15, 0)}
-  .views-row{ margin-bottom:.5rem;
-    .view-mode-exhibits_list_for_homepage{ 
-      h3 {@include nysm-title(16, 0)}
-      .field-name-through-date {font-size:.9rem;}
-      .field-name-field-exhibition-location { ul {list-style-type:none; margin-left:0; li { font-size:.9rem;}}  }
-    }
+
+.block-list { margin-bottom: 1em; 
+  ul {list-style-type:none; margin:0;
+    li{padding:.5em 0; border-bottom:1px dotted $nysm-blue;font-size:.9rem;}
   }
+
 }
+.volunteer-quote {@include nicebox(.5em, .7em); p {font-size:.75rem; font-style:italic; margin-bottom:.3em;}}
+
+
+
+.view-mode-4_up:last-child {float: left!important;}
+.paragraphs-item-photo-4-up, .paragraphs-item-photo-2-up, .paragraphs-item-photo-3-up {
+  margin-bottom:1em !important;
+
+}
+.smaller { p, h2 {font-size:.85rem;}}
+
+
+.view-mode-exhibits_list_for_homepage {.row { margin-left:-.25rem; margin-right:-.25rem; .columns {padding-left:.25rem; padding-right:.25rem;}}}
+
+@media print {html, body {font-size:12px; line-height:14px;}}
+
+ iframe {@include nicebox(.5em, 0); }
+

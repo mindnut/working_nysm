@@ -233,12 +233,13 @@ function nysm_preprocess_render_link($link) {
 
 */
 
+
 function nysm_preprocess_page(&$vars) {
   if(drupal_is_front_page()) {
     drupal_add_js(drupal_get_path('theme', 'nysm') . '/js/edge_includes/edge.6.0.0.min.js');
     drupal_add_js(drupal_get_path('theme', 'nysm') . '/homepageanimation/index.js');
-   
   }
+  
 }
 
 /**
@@ -257,9 +258,10 @@ function nysm_css_alter(&$css) {
   }
 
   // Remove defaults.css file.
- unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/default.css']);
- unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/bootstrap.css']);
+  unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/default.css']);
+  unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/bootstrap.css']);
   unset($css [drupal_get_path('module', 'tb_megamenu') . '/css/base.css']);
+  unset($css [drupal_get_path('module', 'ctools') . '/css/collapsible-div.css']);
 
 }
 
@@ -477,6 +479,16 @@ function nysm_in_active_trail($link_path) {
  * Define custom classes for theming.
  */
 function nysm_preprocess_html(&$vars) {
+
+// First, we must set up an array
+ $element = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'),
+    '#weight' => -1001,
+  );
+drupal_add_html_head($element, 'chrome_frame');
+
   
   // Build a node types array from our targeted content types.
   $types = array(
@@ -665,6 +677,7 @@ function nysm_field_widget_form_alter(&$element, &$form_state, $context) {
     }
   }
 }
+
 
 function nysm_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'biblio_search_form') {

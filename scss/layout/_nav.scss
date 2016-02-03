@@ -1,27 +1,3 @@
-.banner-image { position:relative; width:100%; overflow:hidden;
- 
-      
-  .pane-title {position:absolute; top:15px; width:100%; 
-    
-    .section-heading{max-width: 1000px;  margin: 0 auto !important; margin:0;}
-  }
-    img { flex-shrink:0;
-    min-width:100%;
-    height:auto;}
-      .pagesubnav {width:100%; position:absolute; bottom:-1px; background:rgba(256, 256, 256, 0.0) image-url('menu-shadow.png') bottom repeat-x !important;
-      
-
-      h2.pane-title {display:none;}
-
-
-    .menu-name-main-menu {max-width: 1050px;  margin: 0 auto !important; margin:0; padding:12px 0;
-      li a { @media #{$medium-only}{font-size:.9rem;}
-  @media #{$large-up}{font-size:1rem;}
-  @media (min-width: 641px) and (max-width: 757px) {font-size:.75rem;}}
-    //  .exhibitions {background-color:red; width:100%}
-    }
-  }
-}
 
 .panels-ipe-editing {.banner-image{position:static; .pagesubnav {position:static; .menu-name-menu-research-collections {background-color:#777;}}}}
 
@@ -35,8 +11,6 @@
         &:hover {
         background: $sub-nav-active-bg-hover;
       }
-
-
       }
     }
   }
@@ -56,6 +30,21 @@
   }
 }
 
+
+.node-type-geologic-sites {
+   .pagesubnav {
+    ul.menu{
+      li.resources a{background: $sub-nav-active-bg;
+      color: $sub-nav-active-color;
+      border-left:none;
+        &:hover {
+        background: $sub-nav-active-bg-hover;
+      }
+    }
+    }
+  }
+}
+
 .page-user  {
    .pagesubnav {
     ul.menu{
@@ -69,7 +58,6 @@
     }
   }
 }
-
 .node-type-collection, .collections-term-page, .extended-collections-list  {
    .pagesubnav {
     ul.menu{
@@ -123,13 +111,7 @@
   }
 }
 
-//.page-taxonomy-term {
-//   .pagesubnav {
- //   ul.menu{
-  //    li.department {@extend .active;}
- //   }
- // }
-// }
+
 
 .node-type-article{
    .pagesubnav {
@@ -148,7 +130,7 @@
 //--------------------------------------------------
 .nysmnav {
  //background: rgba(256, 256, 256, 0.25)  image-url('menu-shadow.png') bottom repeat-x !important;
- border-top:1px solid $nysm_yellow;
+ border-top:1px solid $nysm_accent;
 //  padding-bottom: 4px;
 //  margin-bottom:-4px;
 }
@@ -180,3 +162,10 @@
   }
 
 .tb-megamenu-main-menu{ .nav-collapse{  @include containment();  }}
+
+.menu-name-menu-footer-menu {
+  ul{ list-style:none; margin:0;
+    li{}
+  }
+}
+

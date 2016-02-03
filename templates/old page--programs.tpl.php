@@ -152,7 +152,7 @@
         <?php print render($page['sidebar_first']); ?>
       </aside>
     <?php endif; ?>
-    <div class="large-9 main columns">
+    <div class="medium-12 main columns">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlight panel callout">
           <?php print render($page['highlighted']); ?>

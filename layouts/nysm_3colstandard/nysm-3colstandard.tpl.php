@@ -19,20 +19,21 @@
 <div class="pagesubnav sub-nav hide-for-small-only"><?php print $content['subnav']; ?></div></div>
 
 <div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
-  <div class="large-12 columns">
+  <div class="medium-12">
     <?php print $content['top']; ?>
   </div>
-
-  <div class="large-2 columns">
+  <div class="row">
+  <div class="medium-2 columns">
     <?php print $content['leftnav']; ?>
   </div>
-  <div class="large-8 columns">
+  <div class="medium-8 columns">
     <?php print $content['main']; ?>
   </div>
- <div class="large-2 columns">
+ <div class="medium-2 columns">
     <?php print $content['right']; ?>
   </div>
-  <div class="large-12 columns">
+  </div>
+  <div class="medium-12">
     <?php print $content['bottom']; ?>
   </div>
 

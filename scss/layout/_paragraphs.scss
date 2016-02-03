@@ -1,0 +1,29 @@
+.field-type-paragraphs {
+	ul.accordion { margin-left:0; margin-bottom:1.5em;
+		li.accordion-navigation {a.section-title {color:$nysm_blue;}}
+		li {border-top: 1px solid #fafafa;
+			i.arrowed {margin-right:2px; @extend .fa-angle-right; color:$nysm_darkblue;}
+		}
+		li.active {
+			a.section-title {font-family:"gothambold";}
+			i.arrowed {margin-right:0; @extend .fa-angle-down;}
+		}
+	}
+}
+a.colorbox {@extend .th; }
+
+.paragraphs-item-image-w-text { margin-bottom:1em;
+	.left {margin:.25em .8em .8em 0;}
+	.right {margin:.25em .0 1em 1em;}
+}
+
+.paragraphs-item-image-with-long-caption {
+	.view-mode-image_long_caption { background:$base; padding:1em;
+		.field-name-field-file-image-title-text { font-family:"gothambold";}
+		.group-left {margin-top:.5em;}
+	}
+}
+
+.paragraphs-item-multiple-images-w-colorbox {margin-bottom:1rem;}
+
+.view-mode-inline_image_full {margin-bottom:.75rem;}

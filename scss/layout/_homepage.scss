@@ -1,0 +1,67 @@
+$homepage_body_size: .85rem;
+
+.homepage-programs { margin-bottom:1rem;
+     h2{@include nysm-title(14, 0)}
+  .homepage-calendar-list { 
+     .views-row{ 
+       h4 {margin-bottom:.25rem; }
+     .field-name-field-event-date {font-size:$homepage_body_size;line-height:.7rem;}
+     .field-name-field-event-location ul{li{font-size:$homepage_body_size;}}
+     .field-name-field-event-category-type {font-size:$homepage_body_size; line-height:.7rem;}
+   }
+   .featured {background:$nysm_blue;padding:.5rem; color:white;
+    h4 a{color:white;}
+      .field-name-field-event-categories {
+            ul { margin:0; line-height:1.2rem;
+              li{font-size:$homepage_body_size; margin-left:0; }
+              li + li:before{content: " | ";}
+            }
+          }
+      }
+  }
+}
+
+.now-on-view{
+  h2{@include nysm-title(15, 0)}
+       .current-exhibits{ margin-bottom:1rem;
+
+      h4 {margin-bottom:0; }
+      .field-name-through-date {margin-top:-4px;font-size:$homepage_body_size;}
+    // .field-name-field-exhibition-location { ul {list-style-type:none; margin-left:0; margin-bottom:1rem; li { font-size:.9rem;}}  }
+    }
+  
+}
+.col-announcements {
+        .view-mode-homepage_announcement_ { line-height:1.2rem; font-size:$homepage_body_size; margin-bottom:.75rem!important;
+       img {border:1px solid #dedede; margin-top:.5rem;}
+          .field-name-title h4{margin-bottom:0;}
+          .field-name-field-event-date,.field-name-department-and-date, .field-name-field-time-instructions  {font-size:$homepage_body_size;color:#585858; font-family:"gothambold";}
+         // .field-name-field-homepage-blurb{font-size:.8rem; }
+          //.field-name-event-time-and-place{font-size:.9rem;}   
+          .paragraphs-item-text-field p{font-size:$homepage_body_size; margin-bottom:0;}
+        // .field-name-department-and-date{font-size:.9rem; color:#686868;font-family:"gothambold";}
+        .field-name-field-event-categories {
+          ul { margin:0; line-height:1.2rem;
+            li{font-size:$homepage_body_size; margin-left:0; font-style:italic; }
+            li + li:before{content: " | ";}
+          }
+        }
+    }
+ .pane-bundle-homepage-announcement {line-height:1.2rem; font-size:$homepage_body_size; margin-bottom:.75rem!important; 
+      h4,h3{margin-bottom:0; }
+
+      img {border:1px solid #dedede; margin-top:.5rem;}
+      .field-name-field-homepage-blurb p{font-size:$homepage_body_size; line-height:1.4rem; margin-bottom:0; strong {font-size:$homepage_body_size;color:#585858; font-family:"gothambold"; font-weight:normal;}}}
+    .news-list {line-height:1.2rem; font-size:$homepage_body_size; h4 {margin-bottom:0; }}
+}
+.col-events { background-color:#ececec; border-radius:3px; padding-top:.5rem;
+    .field-name-field-event-location{ 
+      ul {list-style-type:none; margin-left:0; margin-bottom:.5rem; 
+        li { font-size:$homepage_body_size;}
+      }  
+    }
+}
+.ctct-embed-signup {form {
+  p {font-size:$homepage_body_size; margin-bottom:.5rem;}
+  [data-id="Lists:span"] {font-size:.75rem;}
+  }}

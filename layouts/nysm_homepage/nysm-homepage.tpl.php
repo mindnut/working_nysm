@@ -19,16 +19,21 @@
   </div>
 <div class="row main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
 
-  <div class="medium-5 columns">
+  <div class="row">
+  <div class="medium-4 columns col-exhibitions">
+  <h4 class="hp-column-title">Now on View</h4>
     <?php print $content['left']; ?>
   </div>
-  <div class="medium-4 columns">
+  <div class="medium-5 columns col-announcements">
+  <h4 class="hp-column-title">Events, News & Announcments</h4>
     <?php print $content['middle']; ?>
   </div>
-  <div class="medium-3 columns">
+  <div class="medium-3 columns col-events">
+ <h4 class="hp-column-title"><a href="/programs">Program Calendar  <i class="fa right fa-calendar"> view all</i></a></h4>
     <?php print $content['right']; ?>
   </div>
-    <div class="large-12 columns">
+  </div>
+    <div class="medium-12">
     <?php print $content['bottom']; ?>
   </div>
 </div> <!-- panels row -->

@@ -13,7 +13,7 @@
      <a href="/" title="<?php print t('Home'); ?>" rel="home" > <img src="/<?php print path_to_theme() . '/images/fatshield50.png'?>" alt="<?php print t('Home'); ?>" /> </a>
   </div>
 
-  <div class="columns medium-4 small-7 ">
+  <div class="columns medium-4 large-3 large-push-1 small-7 ">
      <?php if (!empty($page['toplinks'])): ?>
        <div class="toplinks">
            <?php print render($page['toplinks']); ?>

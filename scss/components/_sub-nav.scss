@@ -85,10 +85,10 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
       text-decoration: $sub-nav-text-decoration;
       color: $nysm_darkblue;
       padding: $sub-nav-padding;
-      background:rgba(256, 256, 256, 0.80);
+      background:rgba(255, 255, 255, 0.80);
       border-left: solid 1px scale-color($nysm_blue, $lightness: +55%);
       &:hover {
-        background:rgba(256, 256, 256, 0.85);
+        background:rgba(255, 255, 255, 0.85);
       
         color: $sub-nav-font-color-hover;
       }

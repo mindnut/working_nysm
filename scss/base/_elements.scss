@@ -13,8 +13,6 @@
 //h3, h4, h5, h6 {}
 
 
-
-
 h2 { @include breakpoint(all-mobile){ font-size:emCalc(24);}}
 
 h4 {@include nysm-title(15);}
@@ -26,6 +24,14 @@ h2.pane-title {@include nysm-title(15);}
 }
 
 .field-name-field-days-of-availability, .form-item-field-placement-possibilities-und {.form-type-checkbox {display:inline-block;}}
+
+figcaption { font-size:.8rem; }
+.group-image-caption { 
+	.field-name-field-file-image-title-text{ font-weight:bold; font-size:.8rem; margin-right:4px; float:left; line-height:1.1em;}
+	.field-name-field-long-description p {font-size:.8rem; float:left; line-height:1.1em;}
+
+}
+
 
 // Anchors
 //-----------------------------------------------------------------------------

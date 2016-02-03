@@ -100,8 +100,11 @@
 		   
     }
      .has-event a {color:$nysm_blue; text-decoration:underline;
-     	&:hover{color:red;}
-     } 
+     	&:hover{color:$nysm_darkblue;}
+     }
+     .ui-datepicker-today {a {background:$nysm_blue; color:white;
+        &:hover{color:white;}}
+ } 
      } 
 }
 
@@ -210,18 +213,23 @@
     position: relative;
 
     .views-row {
-        padding-bottom:1em;
+        padding-bottom:.5em;
         border-bottom:#dbdbdb 1px solid;
+        margin-bottom:.5rem;
     }
 }
 
 #nysm-datepicker-details .view-header {
-    font-family:"gothambook";
-    font-size:1.5em;
-
+    font-family:"gothambold";
+    font-size:1.2rem;
+    color:#454545;
+    border-bottom:#dbdbdb 1px solid;
+    margin-bottom:.5rem;
 }
 
-
+#nysm-datepicker-details .field-name-field-time-instructions {
+    font-size:.8rem;
+}
 
 #nysm-datepicker-details .view-empty p {
     padding-top: 5px;
@@ -264,7 +272,7 @@
 
 #nysm-datepicker-details h2 {
   //  color: #ffff00;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 #nysm-datepicker-details .view-datepicker-details .view-empty {

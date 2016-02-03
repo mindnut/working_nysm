@@ -19,3 +19,17 @@
 .mobilenav {
   button {  @media #{$small-only}{margin: 0; }}
 }
+
+.toplinks {
+	.social { margin-top:5px; float:right;
+		@media #{$small-only}{display:none;}
+		a.ext{ color:rgba(80, 80, 80, 0.40);
+			
+
+		span.ext {display:none; background:none;}
+			}
+		a.ext :hover{ color:scale-color($nysm-blue, $lightness: -20%);
+			@include transition-property(color);
+ 			@include transition-duration(.5s);}
+		}
+	}

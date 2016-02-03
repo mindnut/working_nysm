@@ -11,27 +11,28 @@
   .view-filters {display:none;}
 }
 
-.field-name-field-event-location { ul {list-style-type:none; margin-left:0;}  }
+.field-name-field-event-location, .field-name-field-event-series, .field-name-field-event-categories { ul {list-style-type:none; margin-left:0;}  }
 
 .calendar-list {
-    .views-row{ @include nicebox(.5em, .7em);
+    .views-row{ // @include nicebox(.5em, .7em);
+      margin-bottom:1rem; border-bottom:1px #f2f2f2 solid;
     h2 {@include nysm-title(20); font-weight:normal; min-height:52px; margin-top:.5em;}
    
-    .field-name-field-event-date{font-size: emCalc(14); font-weight: bold; line-height:emCalc(24); color:#454545;}
+    .field-name-field-event-date{font-size: 1rem; font-family:"gothambold"; line-height:emCalc(24); color:#454545;}
     .field-name-field-event-series {
       ul{list-style-type:none; margin:8px 0 -10px 0; li{font-size: emCalc(12); text-transform: uppercase;}}
     }
     .field-name-field-event-location {
-      ul {
+      ul { 
         li {font-size: emCalc(14); line-height:emCalc(24); }}
        }
     .program_body{ p {font-size: emCalc(12); line-height:emCalc(24);}}
-    .field-name-field-event-series {font-size:emCalc(12); margin-bottom:3px; color:#454545; font-weight:bold;text-transform: uppercase;}
+    .field-name-field-event-series {margin:8px 0 -15px 0;font-size:emCalc(12);  color:#454545; font-weight:bold;text-transform: uppercase; a{color:$nysm_darkblue;}}
 
 
   }
-  .featured {background:rgba(255, 255, 255, 0.6) image-url('featured75.png') top right no-repeat; padding:1.5em .7em 1.5em .7em; }
-  h3 { color:#ababab; font-size:emCalc(13); text-align: right; }
+  .featured {background:rgba(255, 255, 255, 0.6) image-url('featured75.png') top right no-repeat; border:1px #f2f2f2 solid; padding:1.5em .7em 1.5em .7em; }
+  h3 { color:#454545; font-family:"gothambold"; font-size:emCalc(13); text-align: right; }
 }
 
 .sortby-category {margin-top:1em; padding:1em; background: rgba(#fff, .4);
@@ -41,13 +42,11 @@
   input[type=checkbox]{margin:7px 0 0 0;}
   .views-widget label {font-size: emCalc(12);font-weight: normal;}
 }
- .program-node {
-   h2 {margin-top:0px;  }
-   .programdetail_category{ text-transform: uppercase; margin-top:15px;}
-    .programdetail_date{ font-weight: bold; margin-bottom:4px; color:#454545;}
+ .node-type-event {
+     .programdetail_date{ font-weight: bold; margin-bottom:4px; color:#454545;}
     .programdetail_location { margin-bottom:5px;  color:$nysm_blue;}
-    .programdetail_body{margin-top:10px; }
-    .field-name-field-cost {font-style: italic;}
+     .field-name-field-cost {font-style: italic;}
+     .field-name-field-event-series { font-weight:bold;text-transform: uppercase; a{color:$nysm_darkblue;}}
 
   // .group-repeat{
  //     h3 {font-size:emCalc(14);}
@@ -66,4 +65,18 @@
   .date-display-single {display:block;}
 } 
 
-// .datepicker-details-page { font-size:.8rem; line-height:.7rem;}
+.field-name-field-event-categories { 
+  ul { margin:0;
+    li{display:inline; margin-left:.25rem;}}
+  .button.tiny {border-radius:4px; font-size:.75rem; margin:0;background-color:#dddded; padding-top:.25rem;padding-bottom:.25rem;}
+  .term-198{ color:red;   }
+  .term-195 {color:#339933;}
+  .term-197 {color:#646464;}
+  .term-199 {color:green;}
+  .term-196 {color:$nysm_darkblue;}
+  .term-200 {color:#c19600;}
+  .term-201 {color:#959a0e;}
+  .term-203 {color:blue;}
+}
+
+//datepicker styles are found in components/datepicker.scss

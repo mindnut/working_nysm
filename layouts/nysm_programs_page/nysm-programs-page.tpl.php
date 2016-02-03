@@ -20,16 +20,19 @@
 </div>
 
 <div class="row program-page main-body" <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
-  <div class="large-12 columns">
+  <div class="medium-12 ">
     <?php print $content['top']; ?>
   </div>
-  <div class="large-9 medium-8 columns">
+  <div class="row">
+  <div class="medium-8 large-9 columns">
     <?php print $content['left']; ?>
   </div>
-  <div class="large-3 medium-4 columns" id="programs-nav">
+  <div class="medium-4 large-3 columns" id="programs-nav">
     <?php print $content['right']; ?>
   </div>
+  </div>
  
-</div>  <div class="large-2 columns">
+</div>  
+<div class="medium-12">
     <?php print $content['bottom']; ?>
   </div><!-- panels row -->

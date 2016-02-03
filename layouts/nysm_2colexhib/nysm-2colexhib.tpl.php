@@ -18,10 +18,10 @@
 
 <div class=""  <?php !empty($css_id) ? print 'id="' . $css_id . '"' : ''; ?>>
   
-  <div class="large-12 exhibition-thumb" >
+  <div class="medium-12 exhibition-thumb" >
     <?php print $content['top']; ?>
   </div>
-  <div class="large-12 exhibition-details">
+  <div class="medium-12 exhibition-details">
     <?php print $content['bottom']; ?>
   </div>
 </div> <!-- panels row -->

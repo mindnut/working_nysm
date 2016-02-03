@@ -1,0 +1,13 @@
+.file-gis {
+	img.file-icon{display:none;}
+}
+
+.view-mode-image_long_caption.file-museum-pdf-publication {
+	@include nicebox(1em, 1em);
+	.field-name-field-volume{font-weight:bold;
+		.label-inline{display:inline; margin-right:.25rem;}}
+}
+
+.views-field-field-loan-policy-pdf {.file {a:before { content:"\f019"; font-family:"FontAwesome"; margin-right:3px;} img.file-icon{display:none;} .file-size {font-size:.75rem;}}}
+
+.pane-node-field-image {margin-bottom:.75rem;}

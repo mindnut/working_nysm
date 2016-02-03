@@ -32,7 +32,7 @@
 	}
 }
 
-.view-display-id-department_staff_list {
+.view-display-id-department_staff_list, .view-display-id-one_contact_only {
 	.views-row{ @include nicebox(.5em, 1em);}
 }
 
@@ -51,8 +51,6 @@
 }
 
 
-
-
 .research-dept {
 	.staff-extended-list {@include nicebox(.5em, 1em);
 	.field-name-field-displayed-name{@include nysm-title(15, 0); margin-bottom:-3px}
@@ -65,3 +63,16 @@
 .field-name-field-collection-type { ul {list-style-type:none; margin-left:0;}  }
 
 //.page-taxonomy-term-25 { .view-departments {.view-header{@include nicebox(.5em, .1em); p{@include nysm-title(16, 0);}}} }
+
+.page-node-23620 {iframe {height:100%;}}
+
+.view-collection-types.view-display-id-block_3, .view-display-id-project_contributor, .view-collections.view-display-id-block_5{ margin-top:2rem;
+	.views-field-field-contact-person, .views-field-field-collections-manager { margin-bottom:.75rem; border-bottom:1px #dbdbdb solid; padding-bottom:1rem;
+		.views-label {font-size:1rem;  }
+		.field-name-display-name-and-link {  line-height:1.2rem;
+			a{font-size:1.3rem;  font-family:"gothambold"; }}
+		.field-name-field-email-address { line-height:1rem;
+		a{font-size:.9rem; line-height:1rem;}}
+	}
+	.file a{font-size:1.2rem; font-family:"gothambold";}
+}
